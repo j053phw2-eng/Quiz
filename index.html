@@ -65,8 +65,8 @@ a_n \to a.
 
 
 
-
-<p><strong>Question 2.</strong> Give rigorous definitions of the following concepts.</p>
+<hr>
+<h2>Question 2.</strong> Give rigorous definitions of the following concepts.</p>
 
 
 <p>
@@ -351,7 +351,7 @@ Define when two functions are equal. How is this related to equivalence?
   <p><strong>(a) Correspondence:</strong><br>
   A correspondence is a set of ordered pairs \( (x, y) \) with \( x \in X \) and \( y \in Y \).  
   A function can be rigorously viewed as a correspondence in which each input \( x \in X \) appears in exactly one pair.  
-  This formalizes the input-output relationship without necessarily specifying a formula or rule.
+  This formalises the input-output relationship without necessarily specifying a formula or rule.
   </p>
 
   <p><strong>(b) Equivalence of functions:</strong><br>
@@ -368,7 +368,7 @@ Define when two functions are equal. How is this related to equivalence?
   \[
   f = g \quad \iff \quad \forall x \in X, \ f(x) = g(x).
   \]  
-  Notice: for functions, **equality coincides with mathematical equivalence**, but equality emphasizes the set-of-pairs perspective.
+  Notice: for functions, **equality coincides with mathematical equivalence**, but equality emphasises the set-of-pairs perspective.
   </p>
 
 </details>
@@ -392,7 +392,7 @@ Suppose we have elements in a vector space or a function space.
 <hr>
 
 <p>
-<strong>Question (b):</strong> Define metrizable (metrisiable) rigorously.
+<strong>Question (b):</strong> Define metrisable (metrisiable) rigorously.
 </p>
 
 <textarea rows="3" cols="80" placeholder="Write your answer here"></textarea>
@@ -408,7 +408,7 @@ Suppose we have elements in a vector space or a function space.
   </p>
 
   <p><strong>(b) Definition of metrisable space:</strong><br>
-  A topological space \( (X, \mathcal{T}) \) is <strong>metrizable</strong> if there exists a metric \( d: X \times X \to [0, \infty) \) such that the topology induced by \( d \) is exactly \( \mathcal{T} \).  
+  A topological space \( (X, \mathcal{T}) \) is <strong>metrisable</strong> if there exists a metric \( d: X \times X \to [0, \infty) \) such that the topology induced by \( d \) is exactly \( \mathcal{T} \).  
   Formally:
   \[
   \mathcal{T} = \{ U \subseteq X \mid \forall x \in U, \exists \varepsilon > 0 \text{ s.t. } B_d(x, \varepsilon) \subseteq U \},
@@ -456,7 +456,7 @@ This concept explains why function-based perspectives are fundamental in functio
 
 <hr>
 
-<h2>Key Point: Sequences, infinite-dimensional vectors, and functional perspective</h2>
+<h3>Key Point: Sequences, infinite-dimensional vectors, and functional perspective</h3>
 
 <p>
 A <strong>sequence</strong> is an infinite list of elements indexed by the natural numbers \( \mathbb{N} = \{1, 2, 3, \dots\} \).  
@@ -735,7 +735,7 @@ A <strong>Banach function space</strong> is a function space that is also a <str
   <li><strong>C([a,b])</strong>: the space of all continuous functions on the interval [a,b], with the supremum norm \(\|f\|_\infty = \sup_{x \in [a,b]} |f(x)|\).</li>
   <li><strong>L<sup>p</sup>([a,b])</strong>: the space of Lebesgue p-integrable functions \(f\) such that
     \(\int_a^b |f(x)|^p dx < \infty\), with norm \(\|f\|_p = \left(\int_a^b |f(x)|^p dx\right)^{1/p}\).</li>
-  <li><strong>l<sup>p</sup></strong>: the space of sequences \((y_1, y_2, \dots)\) such that \(\sum_{n=1}^\infty |y_n|^p < \infty\). These sequences often represent the outputs of functions in a discretized sense.</li>
+  <li><strong>l<sup>p</sup></strong>: the space of sequences \((y_1, y_2, \dots)\) such that \(\sum_{n=1}^\infty |y_n|^p < \infty\). These sequences often represent the outputs of functions in a discretised sense.</li>
 </ul>
 </p>
 
@@ -913,7 +913,7 @@ Define the dual space \(V^*\) of a vector space \(V\). Explain why in infinite-d
        \[
        f\Big(\sum_i x_i e_i\Big) = \sum_i a_i x_i
        \]
-       which is well-defined if only finitely many \(x_i\) are nonzero (Hamel basis).  
+       which is well-defined if only finitely many \(x_i\) are non-zero (Hamel basis).  
     3. There are infinitely many choices of sequences \((a_1, a_2, \dots)\), so **dim \(V^* >\) dim \(V\)**.  
   - In contrast, in finite-dimensional spaces, \(\dim V^* = \dim V\).
   </p>
@@ -1199,8 +1199,4507 @@ Explain what the following symbols mean in mathematics, especially in the contex
 
 
 
+
+  <hr style="border: 3px solid black; margin-top: 50px; margin-bottom: 30px;">
+<h2>New Topic: Theorems and Operators in Functional Analysis</h2>
+<p>Now we move on to Theorems in functional analysis.</p>
+
+
+
+
+
+<h2>Question 12: Normed Vector Spaces</h2>
+
+<p><strong>Question:</strong> Define a normed vector space and list the properties that the norm must satisfy.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Definition:</strong><br>
+  A <strong>normed vector space</strong> is a vector space \(X\) over \(\mathbb{R}\) or \(\mathbb{C}\) equipped with a function 
+  \(\|\cdot\| : X \to [0,\infty)\) called a <em>norm</em> that satisfies, for all \(x, y \in X\) and \(\alpha \in \mathbb{F}\):</p>
+
+  <ul>
+    <li><strong>Positive definiteness:</strong> \(\|x\| = 0 \iff x = 0\)</li>
+    <li><strong>Homogeneity (absolute scalability):</strong> \(\|\alpha x\| = |\alpha| \cdot \|x\|\)</li>
+    <li><strong>Triangle inequality:</strong> \(\|x + y\| \le \|x\| + \|y\|\)</li>
+  </ul>
+
+  <p>The norm induces a metric \(d(x,y) = \|x - y\|\), so every normed vector space is also a metric space.</p>
+
+</details>
+
+
+
+
+
+  
+<h2>Question 13: Equivalent Norms</h2>
+
+<p><strong>Question (a):</strong> What does it mean for two norms to be equivalent?</p>
+
+<textarea rows="4" cols="80" placeholder="Write your answer here"></textarea>
+
+<p><strong>Question (b):</strong> Show a proof that equivalent norms induce the same topology.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solutions</strong></summary>
+
+  <p><strong>(a) Equivalent Norms:</strong><br>
+  Two norms \(\|\cdot\|_1\) and \(\|\cdot\|_2\) on a vector space \(V\) are called <strong>equivalent</strong> if there exist positive constants \(c_1, c_2 > 0\) such that for all \(x \in V\):
+  \[
+  c_1 \|x\|_1 \le \|x\|_2 \le c_2 \|x\|_1
+  \]
+  Equivalent norms induce the <strong>same topology</strong>, meaning they have the same notions of convergence and open sets.</p>
+
+  <p><strong>(b) Proof Idea:</strong><br>
+  Let \(x_n \to x\) in \(\|\cdot\|_1\). By equivalence, we have
+  \[
+  \|x_n - x\|_2 \le c_2 \|x_n - x\|_1 \to 0,
+  \]
+  so \(x_n \to x\) in \(\|\cdot\|_2\) as well. Hence, convergence is preserved and the norms induce the same topology.</p>
+
+  <p><strong>Finite-Dimensional Case:</strong><br>
+  If \(\dim V < \infty\), all norms on \(V\) are equivalent. For example, with a basis \(\{e_i\}\), we can define the infinity norm
+  \(\|x\|_\infty = \max |x_i|\). Equivalence follows from finiteness of coordinates.</p>
+
+  <p><strong>Infinite-Dimensional Case:</strong><br>
+  In infinite-dimensional spaces, equivalence may fail. For instance, compactness properties that hold in finite dimensions may fail in \(\ell^\infty\), so the theorem “all norms are equivalent” does not hold.</p>
+
+</details>
+
+
+
+    
+<h2>Question 14: Continuity of Linear Operators</h2>
+  
+<p><strong>Question:</strong> Let \((V, \|\cdot\|_V)\) and \((W, \|\cdot\|_W)\) be normed vector spaces. Define what it means for a linear map \(T: V \to W\) to be bounded (continuous).</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Definition:</strong><br>
+  A linear map \(T: V \to W\) is called <strong>bounded</strong> (or continuous) if there exists a constant \(M \ge 0\) such that for all \(x \in V\):
+  \[
+  \|T(x)\|_W \le M \|x\|_V.
+  \]</p>
+  <p><strong>Remark:</strong> In normed vector spaces, linear operators are continuous if and only if they are bounded. This is a key result in functional analysis.</p>
+
+</details>
+
+
+
+
+
+
+
+
+  
+<h2>Question 15: Equivalent Statements for Linear Operators</h2>
+
+<p><strong>Question:</strong> Let \(T: V \to W\) be a linear map between normed vector spaces \((V, \|\cdot\|_V)\) and \((W, \|\cdot\|_W)\). Prove that the following statements are equivalent:</p>
+
+<ol>
+  <li>\(T\) is bounded: there exists \(M \ge 0\) such that \(\|T(x)\|_W \le M \|x\|_V\) for all \(x \in V\).</li>
+  <li>\(T\) is continuous at \(0 \in V\).</li>
+  <li>\(T\) is continuous everywhere on \(V\).</li>
+</ol>
+
+<textarea rows="10" cols="80" placeholder="Write your proof here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Proof:</strong></p>
+
+  <p><strong>(1 ⇒ 3)</strong>: Suppose \(T\) is bounded, so there exists \(M \ge 0\) with \(\|T(x)\|_W \le M \|x\|_V\). For any \(x_0 \in V\) and \(x \in V\):</p>
+  <p>\[
+  \|T(x) - T(x_0)\|_W = \|T(x - x_0)\|_W \le M \|x - x_0\|_V,
+  \]</p>
+  <p>so \(T\) is continuous everywhere.</p>
+
+  <p><strong>(3 ⇒ 2)</strong>: Trivial, because continuity everywhere implies continuity at \(0\).</p>
+
+  <p><strong>(2 ⇒ 1)</strong>: Suppose \(T\) is continuous at \(0\). Then there exists \(\delta > 0\) such that \(\|x\|_V < \delta \implies \|T(x)\|_W < 1\). By linearity, for any non-zero \(x \in V\):</p>
+  <p>\[
+  T(x) = \frac{\delta}{\|x\|_V} T\Big(\frac{\|x\|_V}{\delta} x\Big) \implies \|T(x)\|_W \le \frac{\|x\|_V}{\delta}.
+  \]</p>
+  <p>Hence \(T\) is bounded with \(M = 1/\delta\).</p>
+
+  <p><strong>Conclusion:</strong> Boundedness, continuity at 0, and continuity everywhere are equivalent for linear maps between normed spaces.</p>
+
+</details>
+
+
+
+
+
+    
+
+
+
+
+    
+<h2>Question 16: Operator Norm</h2>
+
+<p><strong>Question:</strong> Let \(T: V \to W\) be a linear map between normed vector spaces \((V, \|\cdot\|_V)\) and \((W, \|\cdot\|_W)\). Define the <strong>operator norm</strong> of \(T\) and prove the following:</p>
+
+<ol>
+  <li>\(\|T\| = \sup_{\|x\|_V \le 1} \|T(x)\|_W = \sup_{x \neq 0} \frac{\|T(x)\|_W}{\|x\|_V}\).</li>
+  <li>If \(\dim V < \infty\), then every linear map \(T: V \to W\) is continuous (bounded).</li>
+</ol>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Definition:</strong><br>
+  The <strong>operator norm</strong> of \(T\) is defined by
+  \[
+  \|T\| := \sup_{\|x\|_V \le 1} \|T(x)\|_W.
+  \]
+  Equivalently, for \(x \neq 0\):
+  \[
+  \|T\| = \sup_{x \neq 0} \frac{\|T(x)\|_W}{\|x\|_V}.
+  \]
+  This gives the smallest constant \(M\) such that \(\|T(x)\|_W \le M \|x\|_V\) for all \(x \in V\).</p>
+
+  <p><strong>Proof that \(\dim V < \infty \implies T\) is continuous:</strong><br>
+  1. Let \(\dim V = n < \infty\) and choose a basis \(\{e_1, \dots, e_n\}\) of \(V\).<br>
+  2. With respect to this basis, \(T\) can be represented as a matrix \(A \in \mathbb{F}^{m \times n}\), mapping coordinates in \(V\) to coordinates in \(W\).<br>
+  3. In finite dimensions, **all norms are equivalent**, so there exists constants \(c_1, c_2 > 0\) such that
+     \[
+     c_1 \|x\|_{\text{coord}} \le \|x\|_V \le c_2 \|x\|_{\text{coord}}.
+     \]
+  4. Then
+     \[
+     \|T(x)\|_W \le \|A\|_{\text{matrix}} \|x\|_{\text{coord}} \le \|A\|_{\text{matrix}} c_2 \|x\|_V,
+     \]
+     giving a bound. Hence \(T\) is bounded (continuous).</p>
+
+  <p><strong>Conclusion:</strong> In finite-dimensional spaces, every linear map is automatically continuous. The operator norm provides a quantitative measure of its “size.”</p>
+
+</details>
+
+    
+
+
+
+
+
+    
+    <h2>Question 16: Closed Subspaces of Banach Spaces</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a Banach space and \(Y \subset X\) be a closed linear subspace. Prove that \(Y\) is also a Banach space.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Proof:</strong></p>
+
+  <ol>
+    <li>Let \((y_n)\) be a Cauchy sequence in \(Y\). By definition of a Cauchy sequence:
+    \[
+    \forall \epsilon > 0, \exists N \text{ s.t. } m,n \ge N \implies \|y_n - y_m\|_X < \epsilon.
+    \]</li>
+
+    <li>Since \(Y \subset X\), \((y_n)\) is also a Cauchy sequence in \(X\). Because \(X\) is Banach, there exists \(y \in X\) such that
+    \[
+    y_n \to y \text{ in } X.
+    \]</li>
+
+    <li>Since \(Y\) is closed in \(X\), the limit of any convergent sequence in \(Y\) lies in \(Y\). Hence
+    \[
+    y \in Y.
+    \]</li>
+
+    <li>Therefore, every Cauchy sequence in \(Y\) converges to a point in \(Y\). By definition, \(Y\) is Banach.</li>
+  </ol>
+
+  <p><strong>Conclusion:</strong> Any closed subspace of a Banach space is itself a Banach space.</p>
+
+</details>
+    
+    
+
+
+
+
+
+
+
+<h2>Question 17: Quotient Spaces of Banach Spaces</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a Banach space and \(Y \subset X\) a closed subspace. Define the quotient space \(X/Y\) with the norm
+\[
+\|x + Y\| := \inf_{y \in Y} \|x + y\|_X.
+\]
+Prove that \(X/Y\) is a Banach space.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Proof:</strong></p>
+
+  <ol>
+    <li>Let \((x_n + Y)\) be a Cauchy sequence in \(X/Y\). By definition of the quotient norm:
+    \[
+    \forall \epsilon > 0, \exists N \text{ s.t. } m,n \ge N \implies \|x_n - x_m + Y\| < \epsilon.
+    \]</li>
+
+    <li>By the definition of the quotient norm, for each \(n\) we can pick representatives \(x_n' \in x_n + Y\) so that
+    \(\|x_n' - x_m'\|_X < \epsilon + \frac{1}{n}\). Then \((x_n')\) is a Cauchy sequence in \(X\).</li>
+
+    <li>Since \(X\) is Banach, \((x_n')\) converges to some \(x \in X\):
+    \[
+    x_n' \to x \text{ in } X.
+    \]</li>
+
+    <li>The sequence of cosets \(x_n + Y\) converges to \(x + Y\) in the quotient norm. Indeed,
+    \[
+    \|x_n + Y - (x + Y)\| = \inf_{y \in Y} \|x_n' - x + y\|_X \to 0,
+    \]
+    because \(Y\) is closed and contains all differences of representatives.</li>
+
+    <li>Hence, every Cauchy sequence in \(X/Y\) converges in \(X/Y\), proving that \(X/Y\) is Banach.</li>
+  </ol>
+
+  <p><strong>Conclusion:</strong> The quotient of a Banach space by a closed subspace is again a Banach space.</p>
+
+</details>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+<h2>Question 18: Hahn–Banach Theorem</h2>
+
+<p><strong>Question:</strong> State the Hahn–Banach theorem for real normed vector spaces. Then prove it (or provide a proof sketch) showing how a bounded linear functional defined on a subspace can be extended to the whole space without increasing its norm.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Statement (Real Case):</strong><br>
+  Let \(X\) be a real vector space, \(Y \subset X\) a linear subspace, and \(p: X \to \mathbb{R}\) a sublinear function (i.e., positively homogeneous and subadditive). If \(f: Y \to \mathbb{R}\) is a linear functional such that
+  \[
+  f(y) \le p(y) \quad \forall y \in Y,
+  \]
+  then there exists a linear extension \(F: X \to \mathbb{R}\) of \(f\) (i.e., \(F|_Y = f\)) such that
+  \[
+  F(x) \le p(x) \quad \forall x \in X.
+  \]</p>
+
+  <p><strong>Corollary for Normed Spaces:</strong><br>
+  If \(X\) is a normed space, \(Y \subset X\) a subspace, and \(f: Y \to \mathbb{R}\) (or \(\mathbb{C}\)) is linear and bounded, then there exists an extension \(F: X \to \mathbb{R}\) (or \(\mathbb{C}\)) with the same norm:
+  \[
+  \|F\| = \|f\|.
+  \]</p>
+
+  <p><strong>Proof Sketch (Real Case):</strong></p>
+
+  <ol>
+    <li>Start with a subspace \(Y \subset X\) and a linear functional \(f: Y \to \mathbb{R}\) with \(f(y) \le p(y)\).</li>
+    <li>Pick \(x_0 \in X \setminus Y\). Define a candidate extension \(f_1\) on \(Y_1 = Y + \mathrm{span}\{x_0\}\) by
+      \[
+      f_1(y + \alpha x_0) = f(y) + \alpha c
+      \]
+      for some \(c \in \mathbb{R}\) chosen to satisfy
+      \[
+      f_1(y + \alpha x_0) \le p(y + \alpha x_0) \quad \forall y \in Y, \alpha \in \mathbb{R}.
+      \]</li>
+    <li>By sublinearity of \(p\), such a \(c\) exists, giving a one-dimensional extension.</li>
+    <li>Use Zorn’s lemma: consider the set of all pairs \((Z, g)\) where \(Y \subset Z \subset X\) and \(g: Z \to \mathbb{R}\) is linear with \(g \le p\). This set is partially ordered by inclusion.</li>
+    <li>Every chain has an upper bound (union of subspaces and consistent extensions), so by Zorn’s lemma there exists a maximal element \((M, F)\).</li>
+    <li>Maximality implies \(M = X\); otherwise, we could extend \(F\) further by one dimension. Hence \(F\) is a linear extension of \(f\) to all of \(X\) satisfying \(F \le p\).</li>
+  </ol>
+
+  <p><strong>Conclusion:</strong> Any bounded linear functional on a subspace of a normed space can be extended to the whole space without increasing its norm. This is the Hahn–Banach theorem.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+<h2>Question 19: Open Mapping and Closed Graph Theorems</h2>
+
+<p><strong>Question (a): Open Mapping Theorem</strong><br>
+Let \(X\) and \(Y\) be Banach spaces and \(T: X \to Y\) be a bounded linear surjective operator. Prove that \(T\) is an <em>open mapping</em>, i.e., it maps open sets in \(X\) to open sets in \(Y\).</p>
+
+<textarea rows="8" cols="80" placeholder="Write your proof here"></textarea>
+
+<p><strong>Question (b): Closed Graph Theorem</strong><br>
+Let \(X\) and \(Y\) be Banach spaces and \(T: X \to Y\) a linear operator. Prove that if the graph
+\[
+G(T) = \{(x, T(x)) \in X \times Y : x \in X\}
+\]
+is closed in \(X \times Y\), then \(T\) is bounded (continuous).</p>
+
+<textarea rows="8" cols="80" placeholder="Write your proof here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solutions</strong></summary>
+
+  <p><strong>(a) Open Mapping Theorem:</strong></p>
+
+  <ol>
+    <li>Let \(B_X(0,1) = \{x \in X : \|x\|_X < 1\}\) be the open unit ball in \(X\).</li>
+    <li>Since \(T\) is surjective, \(T(B_X(0,1))\) is a subset of \(Y\) whose linear span is \(Y\).</li>
+    <li>By the Baire category theorem, the closure of \(T(B_X(0,1))\) has nonempty interior in \(Y\).</li>
+    <li>Scaling argument: If \(y_0 \in \text{int}(\overline{T(B_X(0,1))})\), then for any \(y \in Y\),
+    \[
+    y = \|y\|_Y \frac{y}{\|y\|_Y} \in \|y\|_Y \, T(B_X(0,1)),
+    \]
+    showing \(T\) maps open sets in \(X\) to open sets in \(Y\).</li>
+    <li>Conclusion: \(T\) is an open mapping.</li>
+  </ol>
+
+  <p><strong>(b) Closed Graph Theorem:</strong></p>
+
+  <ol>
+    <li>Consider the graph \(G(T) \subset X \times Y\). The product space \(X \times Y\) is Banach under the norm \(\|(x,y)\| = \|x\|_X + \|y\|_Y\).</li>
+    <li>Define the projection \(\pi_X: G(T) \to X\) by \(\pi_X(x, T(x)) = x\). This is linear and bijective from \(G(T)\) onto \(X\).</li>
+    <li>By the open mapping theorem, \(\pi_X^{-1}: X \to G(T)\) is bounded, because \(G(T)\) is Banach (closed in \(X \times Y\)) and \(\pi_X\) is linear and bijective.</li>
+    <li>But \(\pi_X^{-1}(x) = (x, T(x))\), so boundedness of \(\pi_X^{-1}\) implies
+    \[
+    \|(x, T(x))\| = \|x\|_X + \|T(x)\|_Y \le M \|x\|_X \implies \|T(x)\|_Y \le (M-1)\|x\|_X.
+    \]</li>
+    <li>Hence \(T\) is bounded (continuous).</li>
+  </ol>
+
+</details>
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+<h2>Question 20: Uniform Boundedness Principle (Banach–Steinhaus Theorem)</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a Banach space, \(Y\) a normed space, and \(\{T_\alpha\}_{\alpha \in A}\) a family of bounded linear operators from \(X\) to \(Y\). Suppose that for every \(x \in X\),
+\[
+\sup_{\alpha \in A} \|T_\alpha(x)\|_Y < \infty.
+\]
+Prove that the operators are uniformly bounded, i.e.,
+\[
+\sup_{\alpha \in A} \|T_\alpha\| < \infty.
+\]</p>
+
+<textarea rows="8" cols="80" placeholder="Write your proof here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Proof (Baire Category argument):</strong></p>
+
+  <ol>
+    <li>Define the sets
+    \[
+    E_n := \{ x \in X : \|T_\alpha(x)\|_Y \le n \text{ for all } \alpha \in A \}, \quad n \in \mathbb{N}.
+    \]</li>
+
+    <li>By assumption, for each \(x \in X\) there exists \(n\) such that \(x \in E_n\). Hence
+    \[
+    X = \bigcup_{n=1}^\infty E_n.
+    \]</li>
+
+    <li>Each \(E_n\) is **closed**: if \(x_k \in E_n\) and \(x_k \to x\), then by continuity of each \(T_\alpha\),
+    \[
+    \|T_\alpha(x)\|_Y = \lim_{k \to \infty} \|T_\alpha(x_k)\|_Y \le n.
+    \]</li>
+
+    <li>Since \(X\) is Banach, by the **Baire category theorem**, there exists \(N\) such that \(E_N\) has **nonempty interior**. That is, there exists a ball \(B_X(x_0, r) \subset E_N\).</li>
+
+    <li>For any \(x \in X\) and any \(\alpha \in A\), write
+    \[
+    x = x_0 + (x - x_0) \in B_X(x_0, r) + B_X(0, \|x-x_0\|),
+    \]
+    and use linearity and the triangle inequality to get a bound
+    \[
+    \|T_\alpha(x)\|_Y \le \|T_\alpha(x_0)\|_Y + \|T_\alpha(x-x_0)\|_Y \le N + \frac{N}{r} \|x-x_0\|_X.
+    \]</li>
+
+    <li>Hence there exists a constant \(M > 0\) independent of \(\alpha\) such that
+    \[
+    \|T_\alpha\| \le M \quad \forall \alpha \in A.
+    \]</li>
+  </ol>
+
+  <p><strong>Conclusion:</strong> The family \(\{T_\alpha\}_{\alpha \in A}\) is uniformly bounded. This is the Uniform Boundedness Principle.</p>
+
+</details>
+
+  
+    
 <p>This quiz uses MathJax to display math.</p>
+<p>Parts of this site were coded/structured with help of ChatGPT.</p>
 
 
+
+
+
+
+
+<h2>Question 21: Graph of a Map and Closed Graph</h2>
+
+<p><strong>Question (a): Graph of a Map</strong><br>
+Let \(X\) and \(Y\) be vector spaces and \(T: X \to Y\) a map. Define rigorously the <strong>graph of \(T\)</strong>.</p>
+
+<textarea rows="4" cols="80" placeholder="Write your answer here"></textarea>
+
+<p><strong>Question (b): Closed Graph</strong><br>
+Assume \(X\) and \(Y\) are normed spaces. Define rigorously what it means for \(T\) to have a <strong>closed graph</strong>.</p>
+
+<textarea rows="4" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>(a) Graph of a Map:</strong></p>
+  <p>For any map \(T: X \to Y\), the <strong>graph</strong> of \(T\) is the subset of the product space \(X \times Y\) defined by
+  \[
+  G(T) := \{ (x, T(x)) \in X \times Y : x \in X \}.
+  \]
+  The graph is simply the set of all pairs consisting of an input and its corresponding output under \(T\).</p>
+
+  <p><strong>(b) Closed Graph:</strong></p>
+  <p>Let \(X\) and \(Y\) be normed spaces. We say that \(T\) has a <strong>closed graph</strong> if \(G(T) \subset X \times Y\) is closed in the product norm
+  \(\|(x,y)\| = \|x\|_X + \|y\|_Y\). Explicitly, this means:</p>
+
+  <p>If a sequence \((x_n) \subset X\) satisfies \(x_n \to x\) in \(X\) and \(T(x_n) \to y\) in \(Y\), then necessarily \((x,y) \in G(T)\), i.e.,
+  \[
+  y = T(x).
+  \]</p>
+
+  <p><strong>Remark:</strong> Having a closed graph is a key condition in the <strong>Closed Graph Theorem</strong>, which guarantees continuity of linear operators.</p>
+
+</details>
+
+
+
+
+
+
+
+
+  
+<h2>Question 22: Duality Theory: Continuous Dual Space</h2>
+
+<p><strong>Question (a): Continuous Dual Space</strong><br>
+Let \(X\) be a normed vector space. Define rigorously the <strong>continuous dual space</strong> \(X^*\) and explain why every element is bounded (continuous).</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<p><strong>Question (b): Operator Norm on the Dual</strong><br>
+Let \(f \in X^*\). Define its norm and show that it coincides with the operator norm:
+\[
+\|f\| := \sup_{x \neq 0} \frac{|f(x)|}{\|x\|} = \sup_{\|x\| \le 1} |f(x)|.
+\]</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>(a) Continuous Dual Space:</strong></p>
+  <p>The <strong>continuous dual space</strong> of a normed space \(X\) is
+  \[
+  X^* := \{ f: X \to \mathbb{F} \text{ linear and continuous (bounded)} \},
+  \]
+  where \(\mathbb{F} = \mathbb{R}\) or \(\mathbb{C}\).  
+  By the equivalence theorem for linear operators on normed spaces, a linear functional \(f\) is continuous if and only if it is bounded, i.e., there exists \(M \ge 0\) such that
+  \[
+  |f(x)| \le M \|x\| \quad \forall x \in X.
+  \]</p>
+
+  <p><strong>(b) Operator Norm on the Dual:</strong></p>
+  <p>For \(f \in X^*\), its norm is defined as
+  \[
+  \|f\| := \sup_{x \neq 0} \frac{|f(x)|}{\|x\|}.
+  \]
+  Equivalently, using homogeneity of linear maps:
+  \[
+  \|f\| = \sup_{\|x\| \le 1} |f(x)|.
+  \]
+  This is exactly the <strong>operator norm</strong> of the linear functional \(f\).  
+  It gives the smallest constant \(M\) satisfying \(|f(x)| \le M \|x\|\) for all \(x \in X\), which shows that every element of \(X^*\) is bounded.</p>
+
+  <p><strong>Conclusion:</strong> The continuous dual space \(X^*\) consists of all bounded linear functionals on \(X\), and the norm of a functional is exactly its operator norm.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+  
+<h2>Question 23: The Continuous Dual of a Normed Space is Banach</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a normed space (not necessarily complete). Show that its continuous dual \(X^*\), equipped with the operator norm, is a Banach space. In particular, if \((f_n) \subset X^*\) is a Cauchy sequence, prove that it converges to some \(f \in X^*\).</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Proposition:</strong> Let \(X\) be a normed space. Then \((X^*, \|\cdot\|)\) is a Banach space, i.e., every Cauchy sequence in \(X^*\) converges to a bounded linear functional in \(X^*\).</p>
+
+  <p><strong>Proof:</strong></p>
+
+  <ol>
+    <li>Let \((f_n) \subset X^*\) be a Cauchy sequence in the operator norm. That is,
+    \[
+    \forall \epsilon > 0, \exists N \text{ s.t. } m,n \ge N \implies \|f_n - f_m\| = \sup_{\|x\| \le 1} |f_n(x) - f_m(x)| < \epsilon.
+    \]</li>
+
+    <li>Fix \(x \in X\). Then for all \(m,n \ge N\),
+    \[
+    |f_n(x) - f_m(x)| \le \|f_n - f_m\| \cdot \|x\| < \epsilon \|x\|.
+    \]
+    Hence, for each \(x \in X\), the sequence \((f_n(x))\) is Cauchy in \(\mathbb{F} = \mathbb{R}\) or \(\mathbb{C}\), which is complete. So we can define
+    \[
+    f(x) := \lim_{n \to \infty} f_n(x).
+    \]</li>
+
+    <li>Linearity of \(f\) follows from linearity of each \(f_n\) and the limit:
+    \[
+    f(\alpha x + \beta y) = \lim_{n \to \infty} f_n(\alpha x + \beta y) = \alpha \lim f_n(x) + \beta \lim f_n(y) = \alpha f(x) + \beta f(y).
+    \]</li>
+
+    <li>\(f\) is bounded: For all \(x \in X\),
+    \[
+    |f(x)| = \lim_{n \to \infty} |f_n(x)| \le \limsup_{n \to \infty} \|f_n\| \cdot \|x\|.
+    \]
+    Since \((f_n)\) is Cauchy, \(\sup_n \|f_n\| < \infty\). Hence \(\|f\| < \infty\) and \(f \in X^*\).</li>
+
+    <li>Finally, convergence in the operator norm:
+    \[
+    \|f_n - f\| = \sup_{\|x\| \le 1} |f_n(x) - f(x)| \to 0 \quad \text{as } n \to \infty.
+    \]</li>
+  </ol>
+
+  <p><strong>Conclusion:</strong> Every Cauchy sequence in \(X^*\) converges in \(X^*\). Therefore, \((X^*, \|\cdot\|)\) is a Banach space, even if \(X\) is not complete.</p>
+
+</details>
+
+
+
+
+
+
+<h2>Question 24: Canonical Embedding into the Bidual</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a normed space and \(X^*\) its continuous dual. Define the canonical embedding \(J: X \to X^{**}\) (the bidual). Prove rigorously that \(J\) is linear and isometric.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Proposition:</strong> For a normed space \(X\), the map
+  \[
+  J: X \to X^{**}, \quad J(x)(f) := f(x) \text{ for all } f \in X^*
+  \]
+  is linear and satisfies \(\|J(x)\| = \|x\|\). That is, \(J\) is an isometric embedding of \(X\) into its bidual.</p>
+
+  <p><strong>Proof:</strong></p>
+
+  <ol>
+    <li><strong>Linearity:</strong> For \(x, y \in X\) and \(\alpha, \beta \in \mathbb{F}\),
+    \[
+    J(\alpha x + \beta y)(f) = f(\alpha x + \beta y) = \alpha f(x) + \beta f(y) = \alpha J(x)(f) + \beta J(y)(f),
+    \]
+    so \(J(\alpha x + \beta y) = \alpha J(x) + \beta J(y)\).</li>
+
+    <li><strong>Norm-preserving (isometry):</strong> By definition of the operator norm,
+    \[
+    \|J(x)\| = \sup_{\|f\| \le 1} |J(x)(f)| = \sup_{\|f\| \le 1} |f(x)|.
+    \]
+    But by the definition of the dual norm,
+    \[
+    |f(x)| \le \|f\| \|x\| \le \|x\| \quad \forall \|f\| \le 1,
+    \]
+    so \(\|J(x)\| \le \|x\|\).</li>
+
+    <li>To see equality, use the Hahn–Banach theorem: there exists \(f_0 \in X^*\) with \(\|f_0\| = 1\) such that
+    \[
+    f_0(x) = \|x\|.
+    \]
+    Then
+    \[
+    \|J(x)\| \ge |J(x)(f_0)| = |f_0(x)| = \|x\|.
+    \]</li>
+  </ol>
+
+  <p><strong>Conclusion:</strong> \(\|J(x)\| = \|x\|\), so \(J\) is linear and isometric. This provides a natural way to identify \(X\) with a subspace of \(X^{**}\).</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+<h2>Question 25: Weak and Weak-* Topologies</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a normed space and \(X^*\) its continuous dual. Consider the following:</p>
+
+<ol>
+  <li><strong>Weak topology:</strong> Define the weak topology on \(X\) and describe its basic open sets.</li>
+  <li><strong>Weak-* topology:</strong> Define the weak-* topology on \(X^*\) and describe its basic open sets.</li>
+  <li><strong>Infinite-dimensional case:</strong> Explain why the weak and weak-* topologies are strictly weaker than the norm topology if \(X\) is infinite-dimensional, and give an intuitive reason.</li>
+</ol>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>(1) Weak Topology on \(X\):</strong></p>
+  <p>The <strong>weak topology</strong> on \(X\) is the coarsest topology making all functionals \(f \in X^*\) continuous. A net \((x_\alpha) \subset X\) converges weakly to \(x \in X\), written \(x_\alpha \rightharpoonup x\), if
+  \[
+  f(x_\alpha) \to f(x) \quad \forall f \in X^*.
+  \]
+  Basic open sets are of the form
+  \[
+  \{ y \in X : |f_i(y) - f_i(x_0)| < \epsilon, \ i=1,\dots,n \},
+  \]
+  for finitely many functionals \(f_1,\dots,f_n\), \(\epsilon > 0\), and \(x_0 \in X\).</p>
+
+  <p><strong>(2) Weak-* Topology on \(X^*\):</strong></p>
+  <p>The <strong>weak-* topology</strong> on \(X^*\) is the coarsest topology making the evaluation maps \(f \mapsto f(x)\) continuous for all \(x \in X\). A net \((f_\alpha) \subset X^*\) converges weak-* to \(f \in X^*\), written \(f_\alpha \overset{*}{\rightharpoonup} f\), if
+  \[
+  f_\alpha(x) \to f(x) \quad \forall x \in X.
+  \]
+  Basic open sets are of the form
+  \[
+  \{ g \in X^* : |g(x_i) - f(x_i)| < \epsilon, \ i=1,\dots,n \},
+  \]
+  for finitely many points \(x_1,\dots,x_n \in X\), \(\epsilon > 0\), and \(f \in X^*\).</p>
+
+  <p><strong>(3) Infinite-dimensional case:</strong></p>
+  <ul>
+    <li>In infinite-dimensional spaces, weak convergence is strictly weaker than norm convergence: a net can converge weakly without converging in norm. Intuition: only finitely many functionals “test” convergence at a time.</li>
+    <li>Similarly, weak-* convergence is weaker than norm convergence on \(X^*\): a sequence may converge pointwise on \(X\) but not in operator norm.</li>
+    <li>This explains phenomena like the Banach–Alaoglu theorem: closed balls in \(X^*\) are compact in the weak-* topology, even though they are never compact in norm if \(X\) is infinite-dimensional.</li>
+  </ul>
+
+  <p><strong>Conclusion:</strong> Weak and weak-* topologies provide weaker notions of convergence than norm convergence, making them crucial in infinite-dimensional functional analysis.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+<h2>Question 26: Weak Convergence of Sequences</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a normed space. Define what it means for a sequence \((x_n) \subset X\) to converge weakly to \(x \in X\). Give an example in an infinite-dimensional space where weak convergence occurs but norm convergence does not.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Definition (Weak Convergence):</strong></p>
+  <p>A sequence \((x_n) \subset X\) converges <strong>weakly</strong> to \(x \in X\), written \(x_n \rightharpoonup x\), if
+  \[
+  f(x_n) \to f(x) \quad \text{for all } f \in X^*,
+  \]
+  i.e., it converges pointwise when tested against every continuous linear functional.</p>
+
+  <p><strong>Example in \(l^2\):</strong></p>
+  <ul>
+    <li>Let \(e_n = (0,0,\dots,1,0,\dots)\) be the standard basis of \(l^2\) (1 in the \(n\)-th coordinate, 0 elsewhere).</li>
+    <li>Define the sequence \(x_n = e_n\). Then \(\|x_n\| = 1\) for all \(n\), so \(x_n\) does **not** converge in norm.</li>
+    <li>However, for any \(f \in (l^2)^*\) (by Riesz representation, \(f(y) = \langle y, z\rangle\) for some \(z \in l^2\)), we have
+    \[
+    f(e_n) = \langle e_n, z \rangle = z_n \to 0 \quad \text{as } n \to \infty,
+    \]
+    since \(z \in l^2\) implies \(z_n \to 0\). Therefore, \(e_n \rightharpoonup 0\) weakly.</li>
+  </ul>
+
+  <p><strong>Conclusion:</strong> This shows a sequence can converge weakly without converging in norm, a phenomenon that occurs only in infinite-dimensional spaces.</p>
+
+</details>
+
+
+
+
+
+
+
+<h2>Question 27: Banach–Alaoglu Theorem (proof)</h2>
+
+<p><strong>Question:</strong> State the Banach–Alaoglu theorem and prove that the closed unit ball in the dual space \(X^*\) is compact in the weak-* topology.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Theorem (Banach–Alaoglu):</strong></p>
+  <p>Let \(X\) be a normed space. Then the closed unit ball in the dual space
+  \[
+  B_{X^*} = \{ f \in X^* : \|f\| \le 1 \}
+  \]
+  is compact in the weak-* topology.</p>
+
+  <p><strong>Proof (Sketch / Rigorous Outline):</strong></p>
+
+  <ol>
+    <li>Consider the product space \(\Pi_{x \in X} \overline{\mathbb{D}}\), where \(\overline{\mathbb{D}} = \{ z \in \mathbb{F} : |z| \le 1 \}\) and \(\mathbb{F} = \mathbb{R} \text{ or } \mathbb{C}\).</li>
+    
+    <li>By Tychonoff’s theorem, the product of compact spaces is compact in the product topology. So
+    \[
+    \Pi_{x \in X} \overline{\mathbb{D}}
+    \]
+    is compact.</li>
+    
+    <li>Each \(f \in B_{X^*}\) defines a point in this product via evaluation:
+    \[
+    f \mapsto (f(x))_{x \in X} \in \Pi_{x \in X} \overline{\mathbb{D}}.
+    \]</li>
+    
+    <li>The weak-* topology on \(B_{X^*}\) is exactly the subspace topology induced by this product (since weak-* convergence is pointwise convergence on \(X\)).</li>
+    
+    <li>Thus, \(B_{X^*}\) is a closed subset of a compact space (the image under the embedding), so it is compact in the weak-* topology.</li>
+  </ol>
+
+  <p><strong>Remark / Intuition:</strong> Weak-* convergence tests only finitely many points of \(X\) at a time. Tychonoff’s theorem guarantees compactness in the infinite-dimensional setting, even though the unit ball is never norm-compact in infinite dimensions.</p>
+
+</details>
+
+      
+
+
+
+      
+<h2>Question 28: Banach–Alaoglu Theorem (Extended)</h2>
+
+<p><strong>Question:</strong> State the Banach–Alaoglu theorem and explain its consequences in the following contexts:</p>
+
+<ol>
+  <li>Separability of \(X\) and weak-* metrisability of the dual unit ball.</li>
+  <li>Sequential compactness in weak-* topology for separable spaces.</li>
+</ol>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+  <p><strong>Banach–Alaoglu Theorem:</strong> For a normed space \(X\), the closed unit ball in the dual
+  \[
+  B_{X^*} = \{ f \in X^* : \|f\| \le 1 \}
+  \]
+  is compact in the weak-* topology.</p>
+
+  <p><strong>(1) Separability and weak-* metrisability:</strong></p>
+  <ul>
+    <li>If \(X\) is **separable**, then there exists a **countable dense subset** \(\{x_n\} \subset X\).</li>
+    <li>The weak-* topology on \(B_{X^*}\) can then be defined using only evaluations at \(\{x_n\}\), giving a **countable subbasis**.</li>
+    <li>By general topology, a compact space with a countable subbasis is **metrisable**. So the weak-* topology on \(B_{X^*}\) is **metrisable** for separable \(X\).</li>
+  </ul>
+
+  <p><strong>(2) Sequential compactness:</strong></p>
+  <ul>
+    <li>metrisable compact spaces are **sequentially compact**. Therefore, in a separable normed space \(X\), any sequence \((f_n) \subset B_{X^*}\) has a **weak-* convergent subsequence**.</li>
+    <li>Intuition: Although \(B_{X^*}\) may not be norm-compact, weak-* convergence only tests finitely many points at a time, making sequential limits possible in separable spaces.</li>
+  </ul>
+
+  <p><strong>Summary / Intuition:</strong></p>
+  <ul>
+    <li>Banach–Alaoglu gives **compactness of the dual unit ball** in weak-* topology.</li>
+    <li>If \(X\) is separable, the weak-* topology becomes **metrisable**, so compactness implies **sequential compactness**.</li>
+    <li>This is a powerful tool: it guarantees existence of weak-* convergent subsequences in separable dual spaces.</li>
+  </ul>
+
+</details>
+
+
+
+
+
+
+
+<h2>Key Points: Axiom of Choice & Tychonoff’s Theorem</h2>
+
+<p><strong>Question (Quiz-style):</strong> State the key points about the Axiom of Choice and Tychonoff’s theorem, and briefly explain why they are considered equivalent in mathematics.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Key Points</strong></summary>
+
+<ol>
+  <li><strong>Axiom of Choice (AC):</strong>  
+  Given any collection of non-empty sets \(\{X_i\}_{i \in I}\), there exists a function \(f\) (a choice function) such that  
+  \(f(i) \in X_i\) for each \(i \in I\).  
+  Intuition: You can simultaneously pick one element from each set, even infinitely many sets.</li>
+
+  <li><strong>Tychonoff’s Theorem:</strong>  
+  The product of any collection of compact topological spaces \(\prod_{i \in I} X_i\) is compact in the product topology.  
+  Intuition: “Infinite products of compact sets remain compact.”</li>
+
+  <li><strong>Equivalence:</strong>  
+  Proving Tychonoff’s theorem for arbitrary (possibly infinite) products requires the ability to **choose an element from each factor**.  
+  Hence, Tychonoff’s theorem in full generality **is equivalent to the Axiom of Choice**.  
+  Both are deeply connected to making infinitely many selections consistently.</li>
+</ol>
+
+</details>
+
+
+
+
+
+      <h2>Question 29: Tychonoff’s Theorem: Finite Cases</h2>
+
+<p><strong>Question:</strong> Tychonoff’s theorem states that the product of compact spaces is compact. Consider the following:</p>
+
+<ol>
+  <li><strong>Finite product case:</strong> Prove that the product of finitely many compact spaces is compact.</li>
+  <li><strong>Infinite product case:</strong> Explain why the infinite product case is more difficult, and outline why the Axiom of Choice (or ultrafilters) is required for the proof.</li>
+</ol>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+<p><strong>(1) Finite Product Case:</strong></p>
+<ul>
+  <li>Let \(X_1, X_2, \dots, X_n\) be compact topological spaces.</li>
+  <li>Take an open cover \(\mathcal{U}\) of \(X_1 \times \dots \times X_n\).</li>
+  <li>Use the **finite subcover property** of each factor recursively (or induction on \(n\)) to extract a finite subcover for the product.</li>
+  <li>Conclusion: \(X_1 \times \dots \times X_n\) is compact.</li>
+  <li>Key idea: induction + compactness of factors works because the product is finite.</li>
+</ul>
+
+  
+
+
+  <h2>Question 30: Filters and Ultrafilters</h2>
+
+<p><strong>Question:</strong> Answer the following:</p>
+
+<ol>
+  <li><strong>Filter:</strong> Define what a filter is on a set \(X\) and give a brief intuition.</li>
+  <li><strong>Ultrafilter:</strong> Define an ultrafilter and explain how it differs from a general filter.</li>
+</ol>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Key Points</strong></summary>
+
+<ol>
+  <li><strong>Filter on a set \(X\):</strong>  
+    A filter \(\mathcal{F}\) is a collection of subsets of \(X\) satisfying:
+    <ul>
+      <li>\(X \in \mathcal{F}\), \(\emptyset \notin \mathcal{F}\)</li>
+      <li>Closed under finite intersections: If \(A, B \in \mathcal{F}\), then \(A \cap B \in \mathcal{F}\)</li>
+      <li>Upward closed: If \(A \in \mathcal{F}\) and \(A \subset B \subset X\), then \(B \in \mathcal{F}\)</li>
+    </ul>
+    <strong>Intuition:</strong> A filter collects the “large” or “significant” subsets of \(X\) — sets that matter for convergence.</li>
+
+  <li><strong>Ultrafilter on a set \(X\):</strong>  
+    An ultrafilter \(\mathcal{U}\) is a **maximal filter**, meaning:
+    <ul>
+      <li>It is a filter.</li>
+      <li>For every subset \(A \subset X\), either \(A \in \mathcal{U}\) or \(X \setminus A \in \mathcal{U}\) (never both).</li>
+    </ul>
+    <strong>Difference from a general filter:</strong> An ultrafilter makes a “decision” for every subset: it is either “large” (in the ultrafilter) or “small” (its complement is in the ultrafilter).  
+    <strong>Intuition:</strong> An ultrafilter is a filter that is as “decisive” as possible, which allows it to define limits in arbitrary product spaces.</li>
+</ol>
+
+</details>
+
+  
+      
+<h2>Tychonoff’s Theorem: Infinite Product Case</h2>
+
+<p><strong>Question:</strong> Prove that the product of an arbitrary collection of compact spaces is compact (infinite case), and explain why the Axiom of Choice is needed.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<p><strong>Theorem:</strong> Let \(\{X_i\}_{i \in I}\) be compact topological spaces (possibly infinitely many). Then the product space  
+\[
+X = \prod_{i \in I} X_i
+\]  
+with the product topology is compact.</p>
+
+<p><strong>Proof using ultrafilters:</strong></p>
+
+<ol>
+  <li>Let \(\mathcal{U}\) be an **ultrafilter** on \(X\). To show compactness, it suffices to show that \(\mathcal{U}\) converges to some point \(x \in X\).</li>
+
+  <li>For each coordinate \(i \in I\), define the **projected ultrafilter** on \(X_i\):  
+  \[
+  \mathcal{U}_i = \{ A \subset X_i : \pi_i^{-1}(A) \in \mathcal{U} \}.
+  \]</li>
+
+  <li>Since each \(X_i\) is compact, the ultrafilter \(\mathcal{U}_i\) **converges** to some point \(x_i \in X_i\).</li>
+
+  <li>Define the point in the product:  
+  \[
+  x = (x_i)_{i \in I} \in \prod_{i \in I} X_i.
+  \]</li>
+
+  <li>Check convergence:  
+  - A basic open neighborhood of \(x\) in the product topology depends only on finitely many coordinates.  
+  - For each finite subset \(F \subset I\), the sets \(\pi_i^{-1}(U_i) \in \mathcal{U}\) (with \(U_i\) neighborhoods of \(x_i\)) intersect to give a set in \(\mathcal{U}\).  
+  - This shows that \(\mathcal{U}\) contains every basic neighborhood of \(x\), so \(\mathcal{U} \to x\).</li>
+
+  <li>Since **every ultrafilter converges**, the product space \(X\) is compact.</li>
+</ol>
+
+<p><strong>Why Axiom of Choice is needed:</strong></p>
+<ul>
+  <li>Constructing the point \(x = (x_i)\) requires **choosing a limit \(x_i\) in each factor \(X_i\)** simultaneously.</li>
+  <li>For infinitely many indices, there is no canonical rule for these choices, so we need a **choice function**, which is guaranteed by AC.</li>
+  <li>Thus, Tychonoff’s theorem for infinite products is **equivalent to the Axiom of Choice**.</li>
+</ul>
+
+<p><strong>Intuition:</strong> Each factor is compact → each coordinate has a “limit.” Infinite product → pick a point in each coordinate consistently → use ultrafilters + AC → product is compact.</p>
+
+</details>
+
+
+
+
+
+<h2>Question 31: Goldstine's Theorem</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a normed space with unit ball \(B_X = \{x \in X : \|x\| \le 1\}\) and let \(J : X \to X^{**}\) be the canonical embedding into the bidual. State and prove Goldstine’s theorem, including the case when \(X\) is not reflexive.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<p><strong>Goldstine’s Theorem:</strong></p>
+
+<ul>
+  <li>Let \(X\) be a normed space, \(B_X\) its closed unit ball, and \(J: X \to X^{**}\) the canonical embedding. Then  
+  \[
+  J(B_X) \text{ is weak-* dense in } B_{X^{**}}.
+  \]</li>
+
+  <li><strong>Remark:</strong> Even if \(X\) is **not reflexive** (so \(X \subsetneq X^{**}\)), its unit ball is still weak-* dense in the bidual unit ball. This means we can approximate any element of \(B_{X^{**}}\) arbitrarily closely in the weak-* topology using elements from \(X\).</li>
+</ul>
+
+<p><strong>Proof (Sketch using Hahn–Banach):</strong></p>
+
+<ol>
+  <li>Let \(F \in B_{X^{**}}\) and consider a weak-* neighborhood of \(F\) of the form  
+  \[
+  U = \{ G \in X^{**} : |G(f_i) - F(f_i)| < \epsilon, \, i = 1,\dots,n \}
+  \]  
+  for finitely many \(f_1,\dots,f_n \in X^*\) and \(\epsilon > 0\).</li>
+
+  <li>Define the linear map \(T: \text{span}\{f_1,\dots,f_n\} \subset X^* \to \mathbb{F}\) by  
+  \[
+  T\Big(\sum_{i=1}^n \alpha_i f_i\Big) = \sum_{i=1}^n \alpha_i F(f_i).
+  \]</li>
+
+  <li>\(T\) is bounded by the norm of \(F\), so by the **Hahn–Banach theorem**, \(T\) can be extended to a functional \(\tilde{T} \in X^{**}\) with \(\|\tilde{T}\| \le \|F\| \le 1\).</li>
+
+  <li>By the **definition of the canonical embedding** \(J\), there exists \(x \in B_X\) such that  
+  \[
+  J(x)(f_i) = f_i(x) \approx F(f_i), \quad i = 1,\dots,n.
+  \]</li>
+
+  <li>Since \(U\) was arbitrary, this shows that for every weak-* neighborhood \(U\) of \(F\), there exists \(x \in B_X\) with \(J(x) \in U\). Hence \(J(B_X)\) is **weak-* dense** in \(B_{X^{**}}\).</li>
+</ol>
+
+<p><strong>Intuition:</strong> The Hahn–Banach theorem allows us to “approximate” the action of any element in the bidual by evaluating on finitely many functionals, which is exactly what the weak-* topology tests. Even in non-reflexive spaces, the original unit ball is dense enough to “cover” all weak-* neighborhoods.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+  
+<h2>Reflexive Banach Spaces</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a Banach space. State the equivalent characterisations of reflexivity and prove that they are indeed equivalent.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Key Points</strong></summary>
+
+<p><strong>Definition:</strong> A Banach space \(X\) is <strong>reflexive</strong> if the canonical embedding  
+\[
+J: X \to X^{**}, \quad J(x)(f) = f(x), \quad f \in X^*,
+\]  
+is **surjective**, i.e., \(J(X) = X^{**}\).</p>
+
+<p><strong>Equivalent statements:</strong></p>
+
+<ol>
+  <li><strong>Reflexivity:</strong> \(X \cong X^{**}\) via the canonical embedding.</li>
+  <li><strong>Unit ball weakly compact:</strong> The closed unit ball \(B_X = \{x \in X : \|x\| \le 1\}\) is compact in the **weak topology**.</li>
+  <li><strong>Dual reflexivity:</strong> \(X^*\) is reflexive (i.e., \(X^* \cong X^{***}\)).</li>
+</ol>
+
+<p><strong>Proof of equivalence:</strong></p>
+
+<ol>
+  <li><strong>(1 ⇒ 2) Reflexive ⇒ unit ball weakly compact:</strong>  
+    - If \(X\) is reflexive, \(B_X\) is mapped onto \(B_{X^{**}}\) via \(J\).  
+    - By **Banach–Alaoglu**, \(B_{X^{**}}\) is weak-* compact.  
+    - The weak topology on \(X\) coincides with the restriction of the weak-* topology on \(X^{**}\) via \(J\), so \(B_X\) is weakly compact.</li>
+
+  <li><strong>(2 ⇒ 1) Unit ball weakly compact ⇒ reflexive:</strong>  
+    - Assume \(B_X\) is weakly compact.  
+    - By Goldstine, \(J(B_X)\) is weak-* dense in \(B_{X^{**}}\).  
+    - Since \(B_X\) is weakly compact, it is closed in the weak-* topology.  
+    - Density + closedness ⇒ \(J(B_X) = B_{X^{**}}\).  
+    - Scaling shows \(J(X) = X^{**}\), so \(X\) is reflexive.</li>
+
+  <li><strong>(1 ⇔ 3) Reflexivity ⇔ dual reflexivity:</strong>  
+    - If \(X\) is reflexive, \(X \cong X^{**}\).  
+    - Then \(X^* \cong X^{***}\), so \(X^*\) is reflexive.  
+    - Conversely, if \(X^*\) is reflexive, \(X \cong X^{**}\) by duality.</li>
+</ol>
+
+<p><strong>Conclusion:</strong> These statements are equivalent, providing multiple perspectives on reflexivity: via the canonical embedding, via weak compactness of the unit ball, or via dual reflexivity.</p>
+
+</details>
+
+  
+
+
+
+<h2>Question 32: Hilbert Spaces and Inner Product</h2>
+
+<p><strong>Question:</strong> Define a Hilbert space. List the properties of an inner product and show how it induces a norm.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Key Points</strong></summary>
+
+<p><strong>Definition:</strong> A <strong>Hilbert space</strong> is a complete inner product space \(H\) over \(\mathbb{R}\) or \(\mathbb{C}\). That is, \(H\) is a vector space with an inner product \(\langle \cdot , \cdot \rangle\) such that the metric induced by the inner product is complete.</p>
+
+<p><strong>Inner product properties:</strong> For all \(x, y, z \in H\) and \(\alpha \in \mathbb{F} (\mathbb{R} \text{ or } \mathbb{C})\):</p>
+
+<ol>
+  <li><strong>Conjugate symmetry / symmetry:</strong>  
+  \[
+  \langle x, y \rangle = \overline{\langle y, x \rangle} \quad (\text{real case: } \langle x, y \rangle = \langle y, x \rangle)
+  \]</li>
+
+  <li><strong>Linearity in the first argument:</strong>  
+  \[
+  \langle \alpha x + y, z \rangle = \alpha \langle x, z \rangle + \langle y, z \rangle
+  \]</li>
+
+  <li><strong>Positive definiteness:</strong>  
+  \[
+  \langle x, x \rangle \ge 0, \quad \langle x, x \rangle = 0 \iff x = 0
+  \]</li>
+</ol>
+
+<p><strong>Norm induced by inner product:</strong>  
+\[
+\|x\| = \sqrt{\langle x, x \rangle}, \quad x \in H
+\]  
+This norm satisfies all properties of a norm (positivity, homogeneity, triangle inequality via Cauchy–Schwarz inequality), making \(H\) a normed space. Completeness with respect to this norm makes it a Hilbert space.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+  
+
+<h2>Question 33: Cauchy–Schwarz Inequality</h2>
+
+<p><strong>Question:</strong> Let \(H\) be a Hilbert space over \(\mathbb{R}\) or \(\mathbb{C}\) with inner product \(\langle \cdot, \cdot \rangle\). Prove the Cauchy–Schwarz inequality in both finite and infinite-dimensional cases.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<p><strong>Theorem (Cauchy–Schwarz inequality):</strong> For all \(x, y \in H\),  
+\[
+|\langle x, y \rangle| \le \|x\| \, \|y\|.
+\]  
+Equality holds iff \(x\) and \(y\) are linearly dependent.</p>
+
+<h3>Proof (Finite-dimensional case)</h3>
+
+<ol>
+  <li>If \(y = 0\), inequality is trivial. Assume \(y \neq 0\).</li>
+  <li>Consider the scalar \(\alpha = \frac{\langle x, y \rangle}{\|y\|^2}\) and the vector \(z = x - \alpha y\).</li>
+  <li>By positive definiteness, \(\|z\|^2 \ge 0\), so  
+  \[
+  \|x - \alpha y\|^2 = \langle x - \alpha y, x - \alpha y \rangle \ge 0.
+  \]</li>
+  <li>Expand:  
+  \[
+  \|x\|^2 - \frac{|\langle x, y \rangle|^2}{\|y\|^2} \ge 0 \implies |\langle x, y \rangle|^2 \le \|x\|^2 \|y\|^2.
+  \]</li>
+  <li>Take square roots to get  
+  \(|\langle x, y \rangle| \le \|x\| \, \|y\|.\)</li>
+</ol>
+
+<h3>Proof (Infinite-dimensional case)</h3>
+
+<ol>
+  <li>Let \(\{e_i\}_{i \in I}\) be an orthonormal basis for \(H\) (or consider an orthonormal sequence spanning the subspace containing \(x, y\)).</li>
+  <li>Expand \(x = \sum_{i} x_i e_i\), \(y = \sum_{i} y_i e_i\), where the sums converge in norm (since \(H\) is complete).</li>
+  <li>Compute  
+  \[
+  \langle x, y \rangle = \sum_i \overline{x_i} y_i.
+  \]</li>
+  <li>Apply the finite-dimensional Cauchy–Schwarz inequality to the finite partial sums:  
+  \[
+  \Big|\sum_{i=1}^n \overline{x_i} y_i\Big| \le \Big(\sum_{i=1}^n |x_i|^2\Big)^{1/2} \Big(\sum_{i=1}^n |y_i|^2\Big)^{1/2}.
+  \]</li>
+  <li>Take the limit \(n \to \infty\) using completeness and norm convergence:  
+  \[
+  |\langle x, y \rangle| \le \|x\| \, \|y\|.
+  \]</li>
+</ol>
+
+<p><strong>Conclusion:</strong> The Cauchy–Schwarz inequality holds in both finite and infinite-dimensional Hilbert spaces. It is a cornerstone of Hilbert space theory, underlying the triangle inequality, orthogonality, and projections.</p>
+
+</details>
+
+
+
+
+
+
+
+
+<h2>Question 34: Bessel's Inequality</h2>
+
+<p><strong>Question:</strong> Let \(H\) be a Hilbert space over \(\mathbb{R}\) or \(\mathbb{C}\) with inner product \(\langle \cdot, \cdot \rangle\). Let \(\{e_i\}_{i \in I}\) be an orthonormal sequence in \(H\). Prove Bessel's inequality for any \(x \in H\).</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<p><strong>Theorem (Bessel's inequality):</strong></p>
+
+<p>For any \(x \in H\) and orthonormal sequence \(\{e_i\}_{i \in I}\),  
+\[
+\sum_{i \in I} |\langle x, e_i \rangle|^2 \le \|x\|^2.
+\]</p>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Let \(\{e_1, \dots, e_n\}\) be a finite subset of the orthonormal sequence. Consider the finite linear combination (the orthogonal projection of \(x\) onto \(\text{span}\{e_1, \dots, e_n\}\)):  
+  \[
+  P_n x = \sum_{i=1}^n \langle x, e_i \rangle e_i.
+  \]</li>
+
+  <li>By Pythagoras’ theorem (since \(x - P_n x\) is orthogonal to each \(e_i\)), we have  
+  \[
+  \|x\|^2 = \|P_n x\|^2 + \|x - P_n x\|^2 \ge \|P_n x\|^2.
+  \]</li>
+
+  <li>Compute the norm of the projection:  
+  \[
+  \|P_n x\|^2 = \left\| \sum_{i=1}^n \langle x, e_i \rangle e_i \right\|^2 = \sum_{i=1}^n |\langle x, e_i \rangle|^2.
+  \]</li>
+
+  <li>Thus, for any finite subset,  
+  \[
+  \sum_{i=1}^n |\langle x, e_i \rangle|^2 \le \|x\|^2.
+  \]</li>
+
+  <li>For an infinite orthonormal sequence, take the supremum over all finite subsets:  
+  \[
+  \sum_{i \in I} |\langle x, e_i \rangle|^2 = \sup_{n} \sum_{i=1}^n |\langle x, e_i \rangle|^2 \le \|x\|^2.
+  \]</li>
+</ol>
+
+<p><strong>Conclusion:</strong> Bessel’s inequality shows that the “energy” of \(x\) along any orthonormal sequence is bounded by the total squared norm of \(x\). It is the key step toward Parseval’s identity and the theory of orthonormal bases in Hilbert spaces.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+<h2>Question 35: Parseval's Identity and Orthonormal Bases</h2>
+
+<p><strong>Question:</strong> Let \(H\) be a Hilbert space. </p>
+<ol>
+  <li>State and prove that every Hilbert space admits an orthonormal basis.</li>
+  <li>Let \(\{e_i\}_{i \in I}\) be an orthonormal basis of \(H\). Prove Parseval’s identity for any \(x \in H\).</li>
+</ol>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>Part 1: Existence of an Orthonormal Basis</h3>
+
+<p><strong>Theorem:</strong> Every Hilbert space \(H\) admits an orthonormal basis \(\{e_i\}_{i \in I}\), i.e., a maximal orthonormal set whose span is dense in \(H\).</p>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Start with any non-zero vector \(x_1 \in H\) and normalise it: \(e_1 = x_1 / \|x_1\|\).</li>
+  <li>Use Zorn's lemma (or transfinite induction) to extend any orthonormal set to a **maximal orthonormal set** \(\{e_i\}_{i \in I}\). This is possible because the union of a chain of orthonormal sets is orthonormal.</li>
+  <li>Maximality implies that the span of \(\{e_i\}\) is dense in \(H\); otherwise, there exists \(x \notin \overline{\text{span}\{e_i\}}\), and we could normalise its orthogonal component to extend the set, contradicting maximality.</li>
+  <li>Thus \(\{e_i\}_{i \in I}\) is an orthonormal basis of \(H\).</li>
+</ol>
+
+<p><strong>Remark:</strong> This works even for infinite-dimensional Hilbert spaces. Zorn's lemma ensures the existence of maximal orthonormal sets.</p>
+
+<h3>Part 2: Parseval's Identity</h3>
+
+<p><strong>Theorem (Parseval's identity):</strong></p>
+
+<p>Let \(\{e_i\}_{i \in I}\) be an orthonormal basis of \(H\). Then for any \(x \in H\),  
+\[
+x = \sum_{i \in I} \langle x, e_i \rangle e_i \quad \text{(convergent in norm),}
+\]  
+and  
+\[
+\|x\|^2 = \sum_{i \in I} |\langle x, e_i \rangle|^2.
+\]</p>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>Step 1: Bessel’s inequality:</strong>  
+  For any finite subset \(\{e_1, \dots, e_n\}\),  
+  \[
+  \sum_{i=1}^n |\langle x, e_i \rangle|^2 \le \|x\|^2.
+  \]</li>
+
+  <li><strong>Step 2: Partial sums:</strong>  
+  Let \(P_n x = \sum_{i=1}^n \langle x, e_i \rangle e_i\). Then \(x - P_n x\) is orthogonal to each \(e_i\) in the span.</li>
+
+  <li><strong>Step 3: Completeness:</strong>  
+  Since \(\{e_i\}_{i \in I}\) is an orthonormal basis, the span is dense. Hence \(\|x - P_n x\| \to 0\) as \(n \to \infty\), giving  
+  \[
+  x = \sum_{i \in I} \langle x, e_i \rangle e_i.
+  \]</li>
+
+  <li><strong>Step 4: Norm equality:</strong>  
+  Using Pythagoras for orthogonal components:  
+  \[
+  \|x\|^2 = \|P_n x\|^2 + \|x - P_n x\|^2 \to \sum_{i \in I} |\langle x, e_i \rangle|^2.
+  \]</li>
+</ol>
+
+<p><strong>Conclusion:</strong> Every Hilbert space admits an orthonormal basis, and Parseval’s identity provides a complete “energy decomposition” of vectors along that basis.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Question 36: Projection Theorem in Hilbert Spaces</h2>
+
+<p><strong>Question:</strong> Let \(H\) be a Hilbert space and \(M \subset H\) a closed subspace. Prove that for every \(x \in H\), there exists a unique decomposition  
+\[
+x = y + z, \quad y \in M, \, z \in M^\perp,
+\]  
+where \(M^\perp = \{ w \in H : \langle w, m \rangle = 0 \ \forall m \in M\}\). Show that \(y\) is the orthogonal projection of \(x\) onto \(M\).</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<p><strong>Projection Theorem:</strong> For every closed subspace \(M \subset H\) and \(x \in H\), there exists a **unique** decomposition  
+\[
+x = y + z, \quad y \in M, \ z \in M^\perp,
+\]  
+where \(y\) is the orthogonal projection of \(x\) onto \(M\).</p>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>Step 1: Existence of closest point:</strong>  
+  Consider the distance from \(x\) to \(M\):  
+  \[
+  d = \inf_{m \in M} \|x - m\|.
+  \]  
+  Since \(M\) is closed and \(H\) is complete, there exists \(y \in M\) such that  
+  \[
+  \|x - y\| = d.
+  \]</li>
+
+  <li><strong>Step 2: characterisation via inner product:</strong>  
+  For any \(m \in M\) and scalar \(\alpha\), consider the function  
+  \[
+  f(\alpha) = \| x - (y + \alpha m) \|^2 \ge \|x - y\|^2.
+  \]  
+  Expand:  
+  \[
+  f(\alpha) = \|x - y\|^2 - 2 \text{Re}(\alpha \langle x - y, m \rangle) + |\alpha|^2 \|m\|^2.
+  \]  
+  Minimality at \(\alpha = 0\) implies  
+  \[
+  \text{Re}(\langle x - y, m \rangle) = 0 \quad \forall m \in M.
+  \]</li>
+
+  <li><strong>Step 3: Orthogonality:</strong>  
+  Replacing \(m\) by \(i m\) in the complex case, we also get \(\text{Im}(\langle x - y, m \rangle) = 0\).  
+  Hence \(\langle x - y, m \rangle = 0\) for all \(m \in M\), i.e.,  
+  \[
+  z := x - y \in M^\perp.
+  \]</li>
+
+  <li><strong>Step 4: Uniqueness:</strong>  
+  Suppose \(x = y_1 + z_1 = y_2 + z_2\) with \(y_i \in M\), \(z_i \in M^\perp\). Then  
+  \[
+  y_1 - y_2 = z_2 - z_1 \in M \cap M^\perp.
+  \]  
+  But \(M \cap M^\perp = \{0\}\), so \(y_1 = y_2\) and \(z_1 = z_2\).</li>
+</ol>
+
+<p><strong>Conclusion:</strong> Every vector in a Hilbert space can be **uniquely decomposed** into a part in a closed subspace and a part in its orthogonal complement. The map \(x \mapsto y\) defines the **orthogonal projection** onto \(M\).</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+  <h1>Chapter: Operators on Hilbert Spaces</h1>
+
+<p>In this chapter, we study linear operators on Hilbert spaces \(H\), focusing on their properties, types, and key theorems. We begin with basic definitions and move toward important classes of operators like bounded, self-adjoint, unitary, and compact operators.</p>
+
+<hr>
+
+<h2>Question 36: Bounded Linear Operators</h2>
+
+<p><strong>Question:</strong> Let \(H\) be a Hilbert space. A linear operator \(T: H \to H\) is called <strong>bounded</strong> if there exists \(M \ge 0\) such that  
+\[
+\|Tx\| \le M \|x\| \quad \forall x \in H.
+\]  
+Prove that every bounded linear operator is continuous. Also define the operator norm.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<p><strong>Definition:</strong> The <strong>operator norm</strong> of \(T\) is  
+\[
+\|T\| = \sup_{\|x\|=1} \|Tx\| = \sup_{x \neq 0} \frac{\|Tx\|}{\|x\|}.
+\]</p>
+
+<p><strong>Proof of continuity:</strong></p>
+
+<ol>
+  <li>Let \(T\) be bounded: \(\|Tx\| \le M \|x\|\) for all \(x \in H\).</li>
+  <li>Take any sequence \(x_n \to x\) in \(H\). Then  
+  \[
+  \|T x_n - T x\| = \|T(x_n - x)\| \le M \|x_n - x\| \to 0.
+  \]</li>
+  <li>Hence \(T\) is continuous.</li>
+</ol>
+
+<p><strong>Conclusion:</strong> Boundedness and continuity are equivalent for linear operators on Hilbert spaces.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Question 37: Adjoint Operators and Special Classes</h2>
+
+<p><strong>Question:</strong> Let \(H\) be a Hilbert space and \(T: H \to H\) a bounded linear operator. Consider the following:</p>
+
+<ol>
+  <li>Define the <strong>adjoint operator</strong> \(T^*\) and prove its existence and uniqueness.</li>
+  <li>Define the following special classes of operators and give basic properties:
+    <ul>
+      <li>Self-adjoint operators</li>
+      <li>Unitary operators</li>
+      <li>Normal operators</li>
+      <li>Positive operators</li>
+    </ul>
+  </li>
+</ol>
+
+<textarea rows="15" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>Part 1: Adjoint Operators</h3>
+
+<p><strong>Theorem:</strong> For every bounded linear operator \(T: H \to H\), there exists a unique bounded linear operator \(T^*: H \to H\) such that  
+\[
+\langle Tx, y \rangle = \langle x, T^* y \rangle \quad \forall x, y \in H.
+\]</p>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Fix \(y \in H\) and define the linear functional \(f_y(x) := \langle Tx, y \rangle\). Then \(f_y \in H^*\) (continuous dual) since  
+  \(|f_y(x)| = |\langle Tx, y \rangle| \le \|Tx\| \|y\| \le \|T\| \|x\| \|y\|\).</li>
+  
+  <li>By the Riesz Representation Theorem, there exists a unique \(z \in H\) such that  
+  \[
+  f_y(x) = \langle x, z \rangle \quad \forall x \in H.
+  \]  
+  Define \(T^* y := z\).</li>
+
+  <li>Uniqueness follows from uniqueness in the Riesz representation. Linearity and boundedness of \(T^*\) also follow:  
+  \(\|T^*\| = \|T\|\).</li>
+</ol>
+
+<p><strong>Conclusion:</strong> Every bounded operator on a Hilbert space has a unique adjoint operator.</p>
+
+<h3>Part 2: Special Classes of Operators</h3>
+
+<ul>
+  <li><strong>Self-adjoint:</strong> \(T = T^*\).  
+  Properties: \(\langle Tx, x \rangle \in \mathbb{R}\), spectrum is real.</li>
+
+  <li><strong>Unitary:</strong> \(T^* T = T T^* = I\).  
+  Properties: preserves norms, \(\|Tx\| = \|x\|\), and the spectrum lies on the unit circle.</li>
+
+  <li><strong>Normal:</strong> \(T^* T = T T^*\).  
+  Properties: generalises self-adjoint/unitary; admits a spectral theorem.</li>
+
+  <li><strong>Positive operators:</strong> \(T = T^*\) and \(\langle Tx, x \rangle \ge 0\) for all \(x \in H\).  
+  Properties: square roots exist, spectrum lies in \([0, \infty)\).</li>
+</ul>
+
+<p><strong>Remark:</strong> These classes are fundamental in spectral theory, quantum mechanics, and functional analysis.</p>
+
+</details>
+
+
+
+
+
+
+
+
+<h2>Question 38: Unitary Operators Preserve Inner Products and Norms</h2>
+
+<p><strong>Question:</strong> Let \(U: H \to H\) be a unitary operator on a Hilbert space \(H\), i.e., \(U^* U = U U^* = I\). Prove that:</p>
+
+<ol>
+  <li>\(\|Ux\| = \|x\|\) for all \(x \in H\) (norm-preserving).</li>
+  <li>\(\langle Ux, Uy \rangle = \langle x, y \rangle\) for all \(x, y \in H\) (inner product-preserving).</li>
+</ol>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>Proposition:</h3>
+
+<p>If \(U\) is unitary (\(U^* U = I\)), then for all \(x, y \in H\):</p>
+<ul>
+  <li>\(\|Ux\| = \|x\|\)</li>
+  <li>\(\langle Ux, Uy \rangle = \langle x, y \rangle\)</li>
+</ul>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>Norm preservation:</strong>  
+  \[
+  \|Ux\|^2 = \langle Ux, Ux \rangle = \langle x, U^* U x \rangle = \langle x, x \rangle = \|x\|^2.
+  \]  
+  Taking square roots gives \(\|Ux\| = \|x\|\).</li>
+
+  <li><strong>Inner product preservation:</strong>  
+  For any \(x, y \in H\):  
+  \[
+  \langle Ux, Uy \rangle = \langle x, U^* U y \rangle = \langle x, y \rangle.
+  \]</li>
+</ol>
+
+<p><strong>Conclusion:</strong> Unitary operators preserve both norms and inner products, and thus preserve the Hilbert space structure. They are isometries of \(H\).</p>
+
+</details>
+
+
+
+
+
+
+<h2>Question 39: Isometries in Hilbert Spaces</h2>
+
+<p><strong>Question:</strong> Define an <strong>isometry</strong> on a Hilbert space \(H\) and give an example. Explain why every unitary operator is an isometry.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution</strong></summary>
+
+<h3>Definition (Isometry):</h3>
+
+<p>A linear operator \(T: H \to H\) on a Hilbert space \(H\) is called an <strong>isometry</strong> if it preserves norms, i.e.,</p>
+
+\[
+\|Tx\| = \|x\| \quad \forall x \in H.
+\]
+
+<p>Equivalently, \(T\) preserves the inner product: \(\langle Tx, Ty \rangle = \langle x, y \rangle\) for all \(x, y \in H\).</p>
+
+<h3>Example:</h3>
+
+<ul>
+  <li>The identity operator \(I: H \to H\) is trivially an isometry.</li>
+  <li>Any unitary operator \(U\) is an isometry, since \(\|Ux\| = \|x\|\) and \(\langle Ux, Uy \rangle = \langle x, y \rangle\).</li>
+</ul>
+
+<p><strong>Remark:</strong> Every unitary operator is an isometry, but not every isometry is unitary (it may not be surjective).</p>
+
+</details>
+
+
+
+
+
+
+
+  <h3>Key Points: Spectral Theory for Bounded Operators</h3>
+
+<p>Let \(T: H \to H\) be a bounded linear operator on a Hilbert space \(H\).</p>
+
+<h3>Key Definitions:</h3>
+
+<ul>
+  <li><strong>Resolvent set:</strong>  
+  \(\rho(T) = \{\lambda \in \mathbb{C} : (T - \lambda I) \text{ is bijective and } (T - \lambda I)^{-1} \text{ is bounded} \}.\)</li>
+
+  <li><strong>Spectrum:</strong>  
+  \(\sigma(T) = \mathbb{C} \setminus \rho(T) = \{\lambda \in \mathbb{C} : T - \lambda I \text{ is not invertible}\}.\)</li>
+
+  <li><strong>Point spectrum:</strong> Eigenvalues of \(T\):  
+  \(\sigma_p(T) = \{\lambda \in \mathbb{C} : \exists x \neq 0, Tx = \lambda x \}\).</li>
+
+  <li><strong>Continuous spectrum:</strong>  
+  \(\sigma_c(T) = \{\lambda \in \mathbb{C} : T - \lambda I \text{ injective, range dense, not surjective}\}.\)</li>
+
+  <li><strong>Residual spectrum:</strong>  
+  \(\sigma_r(T) = \{\lambda \in \mathbb{C} : T - \lambda I \text{ injective, range not dense}\}.\)</li>
+</ul>
+
+<h3>Key Properties:</h3>
+
+<ul>
+  <li>The spectrum \(\sigma(T)\) is a non-empty compact subset of \(\mathbb{C}\).</li>
+  <li>For any \(\lambda \notin \sigma(T)\), the resolvent operator \(R_\lambda(T) = (T - \lambda I)^{-1}\) exists and is bounded.</li>
+  <li>For a bounded operator, \(\sigma(T) \subset \{ \lambda \in \mathbb{C} : |\lambda| \le \|T\| \}\).</li>
+  <li>If \(T\) is compact, then every non-zero \(\lambda \in \sigma(T)\) is an eigenvalue with finite multiplicity, and \(0\) is the only possible accumulation point.</li>
+  <li>Spectrum of a self-adjoint operator is real; for unitary operators, it lies on the unit circle; for positive operators, in \([0, \infty)\).</li>
+</ul>
+
+<h3>Remark:</h3>
+
+<p>Spectral theory provides a decomposition of bounded operators and 
+  is fundamental for functional calculus, solving operator equations, 
+  and understanding operator behavior in Hilbert spaces. 
+  Compact operators behave like “infinite-dimensional matrices” with discrete 
+  spectra accumulating only at 0.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<h3>Key Points: Spectral Theorem for Bounded Self-Adjoint Operators</h3>
+
+<p>Let \(H\) be a Hilbert space and \(T: H \to H\) a bounded self-adjoint operator (\(T = T^*\)).</p>
+
+<h4>Key Idea:</h4>
+<p>Every bounded self-adjoint operator can be “diagonalised” in a Hilbert space sense using a <strong>projection-valued measure</strong> (PVM). This generalises the concept of eigenvectors and eigenvalues to infinite-dimensional spaces.</p>
+
+<h4>Definitions:</h4>
+
+<ul>
+  <li><strong>Projection-Valued Measure (PVM):</strong>  
+  A map \(E: \mathcal{B}(\mathbb{R}) \to \mathcal{B}(H)\) from the Borel sets of \(\mathbb{R}\) to bounded projections on \(H\) satisfying:
+    <ol>
+      <li>\(E(\emptyset) = 0, E(\mathbb{R}) = I\)</li>
+      <li>\(E(B_1 \cap B_2) = E(B_1) E(B_2)\)</li>
+      <li>\(E(\bigcup_{n=1}^\infty B_n) = \sum_{n=1}^\infty E(B_n)\) for disjoint Borel sets (strong operator topology convergence)</li>
+    </ol>
+  </li>
+</ul>
+
+<h4>Spectral Theorem (Bounded Self-Adjoint Version):</h4>
+
+<p>There exists a unique PVM \(E\) such that:</p>
+
+\[
+T = \int_{\sigma(T)} \lambda \, dE(\lambda)
+\]
+
+<p>and for any bounded Borel function \(f: \sigma(T) \to \mathbb{C}\),</p>
+
+\[
+f(T) = \int_{\sigma(T)} f(\lambda) \, dE(\lambda)
+\]
+
+<p>This is called the <strong>functional calculus</strong> for \(T\).</p>
+
+<h4>Properties:</h4>
+
+<ul>
+  <li>\(\sigma(T) \subset \mathbb{R}\)</li>
+  <li>The PVM \(E(B)\) projects onto the subspace where \(T\) “takes values” in \(B \subset \mathbb{R}\)</li>
+  <li>If \(T\) has purely discrete spectrum, \(E\) reduces to projections onto eigenspaces</li>
+  <li>Allows defining functions of \(T\) rigorously</li>
+</ul>
+
+<h4>Intuition:</h4>
+
+<p>Think of \(T\) as an infinite-dimensional “diagonal matrix”: each \(\lambda \in \sigma(T)\) acts like an eigenvalue, and \(E(\{\lambda\})\) projects onto the corresponding subspace. The integral sums over all these “eigencomponents.”</p>
+
+<hr>
+
+<details>
+  <summary><strong>Sketch of Proof</strong></summary>
+
+<h4>Step 1: Reduce to real C*-algebra:</h4>
+<p>The C*-algebra generated by \(T\) and \(I\) is commutative and self-adjoint.</p>
+
+<h4>Step 2: Apply Gelfand Representation:</h4>
+<p>For a commutative unital C*-algebra, there exists a *-isomorphism to continuous functions on a compact Hausdorff space. Here, the spectrum \(\sigma(T)\) plays that role.</p>
+
+<h4>Step 3: Construct the PVM:</h4>
+<p>Use the Riesz-Markov theorem to associate each Borel set \(B \subset \sigma(T)\) with a projection \(E(B)\) such that</p>
+\[
+\langle x, E(B) x \rangle = \mu_x(B)
+\]  
+for a measure \(\mu_x\) induced by the state \(x \mapsto \langle x, T x \rangle\).</p>
+
+<h4>Step 4: Express \(T\) as the integral:</h4>
+<p>Define the operator integral</p>
+\[
+T = \int_{\sigma(T)} \lambda \, dE(\lambda),
+\]  
+which recovers the action of \(T\) on every vector via \(\langle x, T x \rangle = \int \lambda \, d\mu_x(\lambda)\).</p>
+
+<p><strong>Remark:</strong> If \(T\) has discrete spectrum, the integral reduces to a sum over eigenvalues with orthogonal projections, connecting back to finite-dimensional diagonalisation.</p>
+
+</details>
+
+
+
+
+
+
+<h3>1. Key Points: Functional Calculus for Bounded Self-Adjoint Operators</h3>
+
+<p><strong>Theorem (Continuous Functional Calculus):</strong></p>
+
+<p>Let \(T: H \to H\) be a bounded self-adjoint operator on a Hilbert space \(H\) and let \(\sigma(T) \subset \mathbb{R}\) be its spectrum. For every continuous function \(f: \sigma(T) \to \mathbb{C}\), there exists a unique bounded operator \(f(T)\) such that:</p>
+
+<ol>
+  <li>If \(f(\lambda) = \lambda\), then \(f(T) = T\).</li>
+  <li>If \(f \equiv 1\), then \(f(T) = I\).</li>
+  <li>The map \(f \mapsto f(T)\) is a *-homomorphism:  
+  \(\overline{f}(T) = f(T)^*\), \((fg)(T) = f(T) g(T)\).</li>
+  <li>\(\|f(T)\| = \sup_{\lambda \in \sigma(T)} |f(\lambda)|\).</li>
+</ol>
+
+<h3>Example:</h3>
+
+<ul>
+  <li>Take \(T\) self-adjoint and \(f(\lambda) = \lambda^2\). Then \(f(T) = T^2\).</li>
+  <li>For \(f(\lambda) = e^{i\lambda}\), \(f(T)\) defines a unitary operator \(e^{iT}\).</li>
+</ul>
+
+<h3>2. Compact Self-Adjoint Operators: Discrete Spectrum</h3>
+
+<p><strong>Theorem:</strong> Let \(T: H \to H\) be a compact self-adjoint operator. Then:</p>
+
+<ol>
+  <li>The spectrum \(\sigma(T)\) is at most countable.</li>
+  <li>0 is the only possible accumulation point of \(\sigma(T)\).</li>
+  <li>All non-zero elements of \(\sigma(T)\) are eigenvalues of finite multiplicity.</li>
+  <li>There exists an orthonormal basis of \(H\) consisting of eigenvectors of \(T\).</li>
+</ol>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>Step 1: Non-zero eigenvalues exist:</strong>  
+  If \(T \neq 0\), then by compactness, \(T\) maps the unit ball to a relatively compact set. Using the Riesz lemma, one shows the existence of \(\lambda \neq 0\) and \(x \neq 0\) such that \(Tx = \lambda x\).</li>
+
+  <li><strong>Step 2: Orthogonality of eigenvectors:</strong>  
+  If \(x\) and \(y\) are eigenvectors corresponding to distinct eigenvalues \(\lambda \neq \mu\), then  
+  \(\langle Tx, y \rangle = \lambda \langle x, y \rangle = \langle x, Ty \rangle = \mu \langle x, y \rangle\).  
+  Hence \(\langle x, y \rangle = 0\).</li>
+
+  <li><strong>Step 3: Discreteness of non-zero spectrum:</strong>  
+  Assume an infinite sequence of non-zero eigenvalues accumulating at a non-zero point. Compactness implies existence of a convergent subsequence in \(H\), leading to a contradiction. Hence, 0 is the only possible accumulation point.</li>
+
+  <li><strong>Step 4: Orthonormal basis of eigenvectors:</strong>  
+  Take the span of eigenvectors corresponding to non-zero eigenvalues and complete it with an orthonormal basis of \(\ker(T)\). This gives an orthonormal basis of \(H\) diagonalising \(T\).</li>
+</ol>
+
+<h3>Example:</h3>
+
+<ul>
+  <li>Hilbert-Schmidt operators on \(L^2([0,1])\) are compact and self-adjoint. Their eigenfunctions form a countable orthonormal basis, e.g., Fourier sine/cosine series.</li>
+</ul>
+
+<p><strong>Remark:</strong> Compact self-adjoint operators behave like infinite-dimensional symmetric matrices: their “diagonalisation” generalises classical linear algebra, and functional calculus allows applying functions to these operators.</p>
+
+
+
+
+
+
+
+  
+
+
+
+  
+<h2>Question 40: Operator Theory – Three Key Classes</h2>
+
+<p><strong>Question:</strong> Let \(H\) be a Hilbert space (or a Banach space). Discuss the following classes of operators, including their definitions, properties, and examples.</p>
+
+<ol>
+  <li><strong>Bounded Linear Operators:</strong> Define a bounded linear operator \(T: H \to H\) and state its basic properties.</li>
+  <li><strong>Compact Operators:</strong> Define compact operators, describe their spectrum, and give an example.</li>
+  <li><strong>Fredholm Operators:</strong> Define a Fredholm operator and state the index formula. Give a basic example.</li>
+</ol>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>1. Bounded Linear Operators</h3>
+
+<p><strong>Definition:</strong> A linear operator \(T: H \to H\) is <strong>bounded</strong> if there exists \(C \ge 0\) such that</p>
+
+\[
+\|Tx\| \le C \|x\| \quad \forall x \in H.
+\]
+
+<p><strong>Key Points:</strong></p>
+<ul>
+  <li>\(\|T\| = \sup_{\|x\|=1} \|Tx\|\) defines the operator norm.</li>
+  <li>Boundedness \(\iff\) continuity.</li>
+  <li>Examples: identity \(I\), matrices in \(\mathbb{C}^n\), integral operators with bounded kernels.</li>
+</ul>
+
+<h3>2. Compact Operators</h3>
+
+<p><strong>Definition:</strong> \(T: H \to H\) is <strong>compact</strong> if the image of the unit ball is relatively compact, i.e., every bounded sequence \((x_n)\) has a subsequence \((Tx_{n_k})\) converging in \(H\).</p>
+
+<p><strong>Key Properties:</strong></p>
+<ul>
+  <li>Every compact operator is bounded.</li>
+  <li>Spectrum \(\sigma(T)\) is at most countable, with 0 as the only possible accumulation point.</li>
+  <li>Non-zero spectrum consists of eigenvalues with finite multiplicity.</li>
+  <li>Example: Hilbert-Schmidt operators, integral operators with square-integrable kernels.</li>
+</ul>
+
+<h3>3. Fredholm Operators</h3>
+
+<p><strong>Definition:</strong> \(T: H \to H\) is a <strong>Fredholm operator</strong> if</p>
+<ul>
+  <li>\(\ker(T)\) is finite-dimensional</li>
+  <li>\(\operatorname{coker}(T) = H / \operatorname{ran}(T)\) is finite-dimensional</li>
+  <li>\(\operatorname{ran}(T)\) is closed</li>
+</ul>
+
+<p><strong>Index of a Fredholm operator:</strong></p>
+\[
+\mathrm{index}(T) = \dim \ker(T) - \dim \operatorname{coker}(T).
+\]
+
+<p><strong>Example:</strong> \(T = I + K\), where \(K\) is compact, is Fredholm with index 0.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+<h2>Key Points: Spectral Theory of Compact Operators </h2>
+
+<ul>
+  <li><strong>Definition:</strong> \(T: H \to H\) (Hilbert or Banach space) is compact if it maps bounded sets to relatively compact sets (i.e., every bounded sequence has a convergent subsequence).</li>
+
+  <li><strong>Spectrum is discrete (except 0):</strong>  
+      - \(\sigma(T) \setminus \{0\}\) consists of eigenvalues with finite multiplicity.  
+      - 0 is the only possible accumulation point.</li>
+
+  <li><strong>Eigenvectors form an orthonormal basis (Hilbert case):</strong>  
+      - There exists an orthonormal set of eigenvectors corresponding to non-zero eigenvalues.  
+      - Completing with a basis of \(\ker(T)\) gives a full orthonormal basis of \(H\).</li>
+
+  <li><strong>Functional calculus:</strong>  
+      - Functions of compact self-adjoint operators can be expressed in terms of their eigenvalues and eigenvectors:  
+      \[
+      f(T) x = \sum_{n} f(\lambda_n) \langle x, e_n \rangle e_n
+      \]</li>
+
+  <li><strong>Adjoint:</strong>  
+      - If \(T\) is compact, \(T^*\) is also compact.  
+      - Non-zero spectra of \(T\) and \(T^*\) coincide.</li>
+
+  <li><strong>Examples:</strong>  
+      - Hilbert-Schmidt operators (integral operators with square-integrable kernels)  
+      - Finite-rank operators  
+      - Compact perturbations of the identity: \(I + K\)</li>
+  
+  <li><strong>Importance:</strong>  
+      - Compact operators generalise finite-dimensional linear algebra to infinite dimensions.  
+      - Their spectral decomposition is fundamental in solving operator equations, PDEs, and functional analysis problems.</li>
+</ul>
+
+
+
+  
+
+
+
+
+
+  <h2>Question 41: Riesz Projection</h2>
+
+<p><strong>Question:</strong> Let \(T: X \to X\) be a bounded linear operator on a Banach space \(X\), and let \(\sigma(T)\) be its spectrum. Suppose \(\Gamma \subset \mathbb{C}\) is a closed contour in the resolvent set of \(T\) that encloses an isolated part of the spectrum \(\sigma_0 \subset \sigma(T)\). Define the <strong>Riesz projection</strong> corresponding to \(\sigma_0\) and state its key properties.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Definition (Riesz Projection):</h3>
+
+<p>The Riesz projection \(P\) corresponding to the isolated spectral subset \(\sigma_0\) is defined by:</p>
+
+\[
+P = \frac{1}{2\pi i} \oint_{\Gamma} (zI - T)^{-1} \, dz
+\]
+
+<p>where \(\Gamma\) is a positively oriented contour enclosing \(\sigma_0\) and no other points of \(\sigma(T)\).</p>
+
+<h3>Key Properties:</h3>
+
+<ul>
+  <li><strong>Projection:</strong> \(P^2 = P\), i.e., \(P\) is idempotent.</li>
+  <li><strong>Invariant subspace:</strong> \(\operatorname{ran}(P)\) and \(\ker(P)\) are invariant under \(T\).</li>
+  <li><strong>Decomposition of \(T\):</strong>  
+      \[
+      T = T_0 \oplus T_1 \quad \text{on } \operatorname{ran}(P) \oplus \ker(P),
+      \]  
+      where \(\sigma(T_0) = \sigma_0\) and \(\sigma(T_1) = \sigma(T) \setminus \sigma_0\).</li>
+  <li><strong>Analyticity:</strong> \(P\) depends analytically on \(T\) in a neighborhood of \(T\) in operator norm.</li>
+  <li><strong>Finite-dimensional case:</strong> If \(\sigma_0\) consists of eigenvalues of finite multiplicity, \(P\) projects onto the corresponding generalised eigenspace.</li>
+</ul>
+
+<h3>Intuition:</h3>
+
+<p>Think of the Riesz projection as an **infinite-dimensional analogue of projecting onto the eigenspace of selected eigenvalues**. The contour integral picks out the part of the operator associated only with \(\sigma_0\), separating it from the rest of the spectrum.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+<h2>Question 42: Riesz Decomposition Theorem</h2>
+
+<p><strong>Question:</strong> Let \(T: X \to X\) be a bounded linear operator on a Banach space \(X\). Suppose \(\sigma_0 \subset \sigma(T)\) is an isolated part of the spectrum, and let \(P\) be the Riesz projection corresponding to \(\sigma_0\). State and prove the <strong>Riesz decomposition theorem</strong> for \(X\) with respect to \(\sigma_0\).</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes / Proof Sketch</strong></summary>
+
+<h3>Theorem (Riesz Decomposition):</h3>
+
+<p>Let \(T: X \to X\) be bounded and \(\sigma_0 \subset \sigma(T)\) an isolated spectral set. Let \(P\) be the corresponding Riesz projection. Then:</p>
+
+<ol>
+  <li><strong>Direct sum decomposition:</strong>  
+  \[
+  X = \operatorname{ran}(P) \oplus \ker(P),
+  \]  
+  where \(\operatorname{ran}(P)\) and \(\ker(P)\) are closed, \(T\)-invariant subspaces.</li>
+
+  <li><strong>Restricted spectra:</strong>  
+  \(\sigma(T|_{\operatorname{ran}(P)}) = \sigma_0\),  
+  \(\sigma(T|_{\ker(P)}) = \sigma(T) \setminus \sigma_0\).</li>
+
+  <li><strong>Operator decomposition:</strong>  
+  \[
+  T = T_0 \oplus T_1, \quad T_0 = T|_{\operatorname{ran}(P)}, \quad T_1 = T|_{\ker(P)}.
+  \]</li>
+</ol>
+
+<h3>Proof Sketch:</h3>
+
+<ol>
+  <li><strong>Step 1 – Define Riesz projection:</strong>  
+  \[
+  P = \frac{1}{2\pi i} \oint_{\Gamma} (zI - T)^{-1} dz,
+  \]  
+  where \(\Gamma\) encloses \(\sigma_0\) but no other part of \(\sigma(T)\).</li>
+
+  <li><strong>Step 2 – Show \(P\) is a projection:</strong>  
+  By the properties of contour integrals and the resolvent, \(P^2 = P\) and \(PT = TP\). Hence \(\operatorname{ran}(P)\) and \(\ker(P)\) are \(T\)-invariant.</li>
+
+  <li><strong>Step 3 – Decompose \(X\):</strong>  
+  Every \(x \in X\) can be written uniquely as  
+  \[
+  x = Px + (I-P)x \in \operatorname{ran}(P) \oplus \ker(P).
+  \]</li>
+
+  <li><strong>Step 4 – Restrict operator:</strong>  
+  On \(\operatorname{ran}(P)\), the resolvent formula shows that the spectrum is exactly \(\sigma_0\). On \(\ker(P)\), by construction, the spectrum is \(\sigma(T) \setminus \sigma_0\).</li>
+</ol>
+
+<h3>Remark / Intuition:</h3>
+
+<p>This theorem generalises **finite-dimensional spectral decomposition**: it “isolates” the part of the operator associated with a selected set of eigenvalues, even in infinite-dimensional Banach spaces. Riesz projections allow us to study these parts separately, which is especially useful in perturbation theory and spectral analysis.</p>
+
+</details>
+
+
+
+
+
+
+
+<h2>Unbounded Operators on Hilert Space</h2>
+
+<h3>Key Points</h3>
+<ul>
+  <li><strong>Domain is crucial:</strong> An unbounded operator \(T\) is a linear map \(T: D(T) \subset H \to H\), where \(D(T)\) is a dense subspace of \(H\). Unlike bounded operators, the domain is not necessarily all of \(H\).</li>
+  <li><strong>Closed operators:</strong> \(T\) is closed if its graph \(\mathcal{G}(T) = \{(x, Tx) : x \in D(T)\}\) is closed in \(H \oplus H\).</li>
+  <li><strong>Closable operators:</strong> \(T\) is closable if it has a closed extension \(\overline{T}\), i.e., the closure of the graph \(\mathcal{G}(T)\) is itself a graph of an operator.</li>
+</ul>
+
+<h3>Question 43: Closed and Closable Operators</h3>
+
+<p><strong>Question:</strong> Let \(T: D(T) \subset H \to H\) be a densely defined linear operator. Prove the following proposition:</p>
+
+<ol>
+  <li><strong>Proposition:</strong> \(T\) is closable if and only if for every sequence \((x_n) \subset D(T)\) with \(x_n \to 0\) and \(Tx_n \to y \in H\), we have \(y = 0\).</li>
+  <li>Show that if \(T\) is closed, then it is automatically closable.</li>
+</ol>
+
+<textarea rows="10" cols="80" placeholder="Write your proof here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof Sketch</strong></summary>
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>Step 1 – Necessity:</strong>  
+  Suppose \(T\) is closable with closure \(\overline{T}\). If \(x_n \to 0\) and \(Tx_n \to y\), then \((0, y) \in \mathcal{G}(\overline{T})\). Since \(\overline{T}\) is closed, its graph is closed, and the only element with 0 in the first component is 0 in the second. Hence \(y = 0\).</li>
+
+  <li><strong>Step 2 – Sufficiency:</strong>  
+  Suppose the condition holds. Let \(\mathcal{G}(\overline{T})\) be the closure of \(\mathcal{G}(T)\) in \(H \oplus H\). Define \(\overline{T}\) on the set of all \(x \in H\) such that \((x, y) \in \mathcal{G}(\overline{T})\). The uniqueness condition ensures that \(\overline{T}\) is well-defined and closed.</li>
+
+  <li><strong>Step 3 – Closed implies closable:</strong>  
+  If \(T\) is closed, then its graph is already closed, so trivially \(\overline{T} = T\). Hence every closed operator is closable.</li>
+</ol>
+
+<p><strong>Conclusion:</strong> This proposition gives a practical criterion to check whether a densely defined operator can be extended to a closed operator.</p>
+
+</details>
+
+<h3>Key Points: Self-Adjoint Extensions</h3>
+
+<ul>
+  <li>For symmetric operators \(T\) (\(\langle Tx, y \rangle = \langle x, Ty \rangle\) for all \(x, y \in D(T)\)), a key question is whether \(T\) admits a self-adjoint extension.</li>
+  <li>Von Neumann’s theory: the existence of self-adjoint extensions is determined by the deficiency indices  
+  \((n_+, n_-) = (\dim \ker(T^* - iI), \dim \ker(T^* + iI))\).</li>
+  <li>If \(n_+ = n_-\), there exists a family of self-adjoint extensions of \(T\).</li>
+  <li>Examples: The momentum operator \(P = -i d/dx\) on \(L^2([0,1])\) with domain \(C_c^\infty(0,1)\) is symmetric but not self-adjoint; proper boundary conditions yield self-adjoint extensions.</li>
+</ul>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <h2>Topological Vector Spaces (TVS)</h2>
+
+<h3>Definition</h3>
+
+<p>A <strong>topological vector space</strong> is a vector space \(X\) over the field \(\mathbb{R}\) or \(\mathbb{C}\) equipped with a topology \(\tau\) such that:</p>
+
+<ol>
+  <li>The vector addition \(+: X \times X \to X\), \((x,y) \mapsto x+y\), is <strong>continuous</strong> with respect to the product topology on \(X \times X\).</li>
+  <li>The scalar multiplication \(\cdot: \mathbb{F} \times X \to X\), \((\alpha, x) \mapsto \alpha x\), is <strong>continuous</strong> with respect to the usual topology on \(\mathbb{F}\) and \(\tau\) on \(X\).</li>
+</ol>
+
+<p>We denote the space as \((X, \tau)\), where \(X\) is the vector space and \(\tau\) is the topology.</p>
+
+<h3>Key Points / Remarks</h3>
+
+<ul>
+  <li><strong>No norm required:</strong> Unlike normed spaces, the topology \(\tau\) need not come from a norm. The only requirement is continuity of addition and scalar multiplication.</li>
+  <li><strong>Examples:</strong></li>
+  <ul>
+    <li>Normed spaces (\(X, \|\cdot\|\)) with the metric topology from the norm.</li>
+    <li>The space \(C([0,1])\) with the topology of uniform convergence on compact sets (locally convex, but not necessarily normed in some versions).</li>
+    <li>Sequence spaces with the product topology, e.g., \(\mathbb{R}^\mathbb{N}\) with pointwise convergence.</li>
+  </ul>
+
+
+
+
+
+
+  <hr style="border: 2px solid #000; margin-top: 40px; margin-bottom: 20px;">
+
+<h2>Definition: Seminorm</h2>
+
+<p>Let \(X\) be a vector space over \(\mathbb{R}\) or \(\mathbb{C}\). A function \(p: X \to [0, \infty)\) is called a <strong>seminorm</strong> if it satisfies:</p>
+
+<ol>
+  <li><strong>Absolute homogeneity:</strong> 
+  \[
+  p(\alpha x) = |\alpha| \, p(x) \quad \forall \alpha \in \mathbb{F}, \, x \in X.
+  \]</li>
+  
+  <li><strong>Subadditivity (triangle inequality):</strong> 
+  \[
+  p(x + y) \le p(x) + p(y) \quad \forall x, y \in X.
+  \]</li>
+</ol>
+
+<p><strong>Remark:</strong> Unlike a norm, a seminorm may satisfy \(p(x) = 0\) for some non-zero \(x \in X\). If \(p(x) = 0 \implies x = 0\), then \(p\) is a norm.</p>
+
+
+
+
+
+
+
+
+
+
+  
+<h2>Question 44: Locally Convex Topological Vector Spaces</h2>
+
+<p><strong>Question:</strong> Let \((X, \tau)\) be a topological vector space. Define what it means for the topology \(\tau\) to be <strong>locally convex</strong> and explain the characterisation in terms of seminorms.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Answer</strong></summary>
+
+<h3>Definition / characterisation:</h3>
+
+<p>The topology \(\tau\) on \(X\) is <strong>locally convex</strong> if there exists a neighborhood base of \(0 \in X\) consisting of **convex sets**. Equivalently, \(\tau\) is locally convex if it can be generated by a family of seminorms \(\{p_i\}_{i \in I}\), meaning the open sets in \(X\) are unions of sets of the form:</p>
+
+\[
+U = \big\{ x \in X : p_{i_1}(x - x_0) < \epsilon_1, \dots, p_{i_n}(x - x_0) < \epsilon_n \big\}
+\]
+
+<p>for some finite collection of seminorms \(p_{i_1}, \dots, p_{i_n}\), \(\epsilon_1, \dots, \epsilon_n > 0\), and \(x_0 \in X\).  
+
+In other words, \(U \subset X\) is open if for every \(x \in U\), there exist finitely many seminorms \(p_{i_1}, \dots, p_{i_n}\) and \(\epsilon_1, \dots, \epsilon_n > 0\) such that:</p>
+
+\[
+\{y \in X : p_{i_k}(y - x) < \epsilon_k, \, k = 1, \dots, n \} \subset U.
+\]
+
+<h3>Remarks:</h3>
+<ul>
+  <li>Every normed space is locally convex because the norm itself is a seminorm and generates convex balls.</li>
+  <li>Locally convex spaces are the natural setting for the **Hahn–Banach theorem** and for studying **dual spaces** in functional analysis.</li>
+  <li>Convexity of neighborhoods ensures good separation properties and allows the use of continuous linear functionals to study the topology.</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+  
+<h2>Question 45: metrisability of a Topological Space</h2>
+
+<p><strong>Question:</strong> What does it mean for a topological space \((X, \tau)\) to be <strong>metrisable</strong>?</p>
+
+<textarea rows="4" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Answer</strong></summary>
+
+<p>A topological space \((X, \tau)\) is said to be <strong>metrisable</strong> if there exists a metric \(d: X \times X \to [0, \infty)\) such that the topology induced by \(d\) coincides with \(\tau\).  
+
+Equivalently:</p>
+
+<ul>
+  <li>Open sets in \((X, \tau)\) are exactly the unions of open balls \(B_d(x, r) = \{y \in X : d(x,y) < r\}\) for \(x \in X\) and \(r > 0\).</li>
+  <li>Every metrisable space is a Hausdorff space, and sequences behave nicely with respect to convergence (sequential convergence characterises the topology).</li>
+</ul>
+
+<p><strong>Remark:</strong> In locally convex spaces, metrisability often requires the topology to be generated by a <em>countable</em> family of seminorms.</p>
+
+</details>
+
+
+
+
+
+
+
+<h2>Question 46: Fréchet Spaces</h2>
+
+<h3>Definition</h3>
+
+<p>A <strong>Fréchet space</strong> is a topological vector space \((X, \tau)\) over \(\mathbb{R}\) or \(\mathbb{C}\) satisfying:</p>
+
+<ol>
+  <li><strong>Locally convex:</strong> \(\tau\) has a neighborhood base of 0 consisting of convex sets (equivalently, the topology is generated by a family of seminorms \(\{p_n\}_{n \in \mathbb{N}}\)).</li>
+  <li><strong>metrisable:</strong> There exists a translation-invariant metric \(d\) generating \(\tau\).</li>
+  <li><strong>Complete:</strong> Every Cauchy sequence (with respect to the metric) converges in \(X\).</li>
+</ol>
+
+<p>Equivalently, a Fréchet space is a **complete, metrisable, locally convex topological vector space**.</p>
+
+<h3>Key Properties</h3>
+
+<ul>
+  <li>Can be described via a **countable family of seminorms** \(p_1, p_2, \dots\) such that a sequence \((x_n)\) converges if and only if \(p_k(x_n - x) \to 0\) for all \(k \in \mathbb{N}\).</li>
+  <li>All Banach spaces are Fréchet spaces (take the single norm as the seminorm family).</li>
+  <li>Spaces of smooth functions \(C^\infty([0,1])\) with seminorms \(p_n(f) = \sup_{x \in [0,1]} |f^{(n)}(x)|\) are Fréchet spaces but not Banach.</li>
+  <li>Fréchet spaces are **locally convex and complete**, making them suitable for functional analysis beyond Banach spaces.</li>
+  <li>metrisability implies sequential methods can be used to study convergence, compactness, etc.</li>
+</ul>
+
+
+
+
+
+<h2>Question 47: LF Spaces (Limit of Fréchet Spaces)</h2>
+
+<h3>Definition</h3>
+
+<p>An <strong>LF space</strong> is a topological vector space \(X\) that is the **inductive limit of a sequence of Fréchet spaces**: </p>
+
+\[
+X = \bigcup_{n=1}^\infty X_n, \quad X_1 \subset X_2 \subset X_3 \subset \cdots
+\]
+
+where each \(X_n\) is a Fréchet space and the inclusion maps \(X_n \hookrightarrow X_{n+1}\) are continuous.  
+
+The topology on \(X\) is the **finest locally convex topology** such that each inclusion \(X_n \to X\) is continuous.
+
+<h3>Key Points / Properties</h3>
+
+<ul>
+  <li>LF spaces are **locally convex** but generally **not metrisable** (unless the sequence stabilises at some \(X_n\)).</li>
+  <li>They are **complete** if each \(X_n\) is complete (i.e., Fréchet).</li>
+  <li>They allow the study of spaces that are “too big” to be Fréchet, e.g., spaces of **test functions**:</li>
+  <ul>
+    <li>\(\mathcal{D}(\Omega) = C_c^\infty(\Omega)\), the space of smooth functions with compact support on an open set \(\Omega \subset \mathbb{R}^n\), is an LF space.</li>
+    <li>Used in **distribution theory**, because distributions are continuous linear functionals on LF spaces.</li>
+  </ul>
+  <li>Sequential convergence is **more subtle**, often requiring the convergence to occur in some stage \(X_n\).</li>
+</ul>
+
+
+
+
+
+
+
+<h2>Question 48: Distribution Spaces</h2>
+
+<h3>Definition: Space of Distributions</h3>
+
+<p>Let \(\Omega \subset \mathbb{R}^n\) be open. The space of test functions with compact support is denoted by:</p>
+
+\[
+\mathcal{D}(\Omega) := C_c^\infty(\Omega)
+\]
+
+<p>equipped with its standard <strong>LF topology</strong> (inductive limit of Fréchet spaces). Then the <strong>space of distributions</strong> on \(\Omega\) is defined as the topological dual:</p>
+
+\[
+\mathcal{D}'(\Omega) := \{ T: \mathcal{D}(\Omega) \to \mathbb{C} \mid T \text{ is linear and continuous} \}.
+\]
+
+<h3>Key Properties</h3>
+
+<ul>
+  <li><strong>Locally convex:</strong> \(\mathcal{D}'(\Omega)\) is a locally convex space as the dual of a locally convex space.</li>
+  <li><strong>Complete:</strong> \(\mathcal{D}'(\Omega)\) is complete in the weak-* topology (Banach–Alaoglu style argument for LF spaces).</li>
+  <li><strong>Not normable:</strong> There is no single norm generating the topology; convergence is defined via seminorms or bounded sets in \(\mathcal{D}(\Omega)\).</li>
+  <li><strong>Dual topologies:</strong> There are two important notions of convergence for distributions:</li>
+  <ul>
+    <li><strong>Weak-* topology:</strong> \(T_\alpha \to T\) if \(\langle T_\alpha, \phi \rangle \to \langle T, \phi \rangle\) for all \(\phi \in \mathcal{D}(\Omega)\). This is pointwise convergence on test functions.</li>
+    <li><strong>Strong dual topology:</strong> Uniform convergence on bounded subsets of \(\mathcal{D}(\Omega)\). Provides finer control, useful for continuity of operations like differentiation and convolution.</li>
+  </ul>
+  <li>LF nature of \(\mathcal{D}(\Omega)\) ensures distributions can act on “large” spaces, but convergence in \(\mathcal{D}'(\Omega)\) can be subtle depending on the topology considered.</li>
+</ul>
+
+<h3>Remarks</h3>
+
+<ul>
+  <li>\(\mathcal{D}'(\Omega)\) contains all locally integrable functions as regular distributions, i.e., \(f \mapsto T_f\) with \(T_f(\phi) = \int_\Omega f(x) \phi(x) dx\).</li>
+  <li>The weak-* topology is useful for defining sequential convergence and continuity of linear functionals.</li>
+  <li>The strong dual topology is necessary to guarantee continuity of operations that involve families of test functions simultaneously.</li>
+  <li>Distribution spaces are a prototypical example of LF duals: **non-normable, complete, locally convex, and metrisable on bounded sets**.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<h2>Question 48: Duality in Locally Convex Spaces</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a locally convex space (LCS) over \(\mathbb{R}\) or \(\mathbb{C}\). Consider its continuous dual \(X'\) (the space of all continuous linear functionals on \(X\)).</p>
+
+<ol>
+  <li>Define the <strong>weak-* topology</strong) on \(X'\) and describe convergence in this topology.</li>
+  <li>Define the <strong>strong dual topology</strong> on \(X'\) and explain how convergence differs from the weak-* topology.</li>
+  <li>Explain why the strong dual is generally finer than the weak-* topology and give an example where the two topologies differ.</li>
+</ol>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Answer</strong></summary>
+
+<h3>1. Weak-* Topology on \(X'\)</h3>
+<p>The <strong>weak-* topology</strong> on \(X'\) is the coarsest topology making all evaluation maps continuous:</p>
+
+\[
+\phi \mapsto \phi(x) \in \mathbb{F}, \quad \forall x \in X.
+\]
+
+<p>Convergence in the weak-* topology: a net \((\phi_\alpha) \subset X'\) converges to \(\phi \in X'\) if and only if</p>
+
+\[
+\phi_\alpha(x) \to \phi(x) \quad \forall x \in X.
+\]
+
+<p>Intuition: pointwise convergence on \(X\).</p>
+
+<h3>2. Strong Dual Topology on \(X'\)</h3>
+<p>The <strong>strong dual topology</strong> on \(X'\) is generated by the family of seminorms:</p>
+
+\[
+p_B(\phi) := \sup_{x \in B} |\phi(x)|, \quad \text{for all bounded sets } B \subset X.
+\]
+
+<p>Convergence in the strong dual: a net \((\phi_\alpha)\) converges to \(\phi\) if and only if it converges <em>uniformly on all bounded subsets of \(X\)</em>. This is stronger than pointwise convergence.</p>
+
+<h3>3. Comparison and Example</h3>
+<ul>
+  <li>The strong dual topology is **finer** than the weak-* topology because uniform convergence on bounded sets implies pointwise convergence on individual elements.</li>
+  <li>Example: Let \(X = \mathcal{D}(\Omega)\). Then \(\mathcal{D}'(\Omega)\) with the weak-* topology is pointwise convergence on test functions, whereas the strong dual requires uniform convergence on bounded subsets. These topologies are not the same, but both make \(\mathcal{D}'(\Omega)\) locally convex and complete.</li>
+  <li>Key consequence: operations like differentiation or convolution are continuous in the strong dual topology but may fail to be continuous in the weak-* topology.</li>
+</ul>
+
+<p><strong>Summary:</strong> Weak-* = pointwise convergence, Strong = uniform on bounded sets. Strong dual is generally finer, capturing more “continuity control” over the LCS.</p>
+
+</details>
+
+
+
+
+
+
+
+
+<h2>Question 49: Barrelled and Bornological Spaces</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a locally convex space (LCS). Define and explain the following classes of spaces:</p>
+
+<ol>
+  <li><strong>Barrelled space:</strong> Define what it means for a locally convex space to be barrelled and explain the significance.</li>
+  <li><strong>Bornological space:</strong> Define what it means for a locally convex space to be bornological and explain the significance.</li>
+</ol>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Answer</strong></summary>
+
+<h3>1. Barrelled Spaces</h3>
+<p>A locally convex space \(X\) is called <strong>barrelled</strong> if every <em>barrel</em> in \(X\) is a neighborhood of 0. A <strong>barrel</strong> is a subset of \(X\) that is:</p>
+
+<ul>
+  <li><strong>Closed</strong></li>
+  <li><strong>Convex</strong></li>
+  <li><strong>Balanced</strong> (absorbs scalar multiples with |α| ≤ 1)</li>
+  <li><strong>Absorbing</strong> (for every x in X, there exists t > 0 such that x ∈ tB)</li>
+</ul>
+
+<p><strong>Significance:</strong> In barrelled spaces, every linear map from \(X\) to a Banach space that is **pointwise bounded** is automatically **continuous** (Banach–Steinhaus theorem / Uniform Boundedness Principle holds).</p>
+
+<h3>2. Bornological Spaces</h3>
+<p>A locally convex space \(X\) is called <strong>bornological</strong> if every bounded linear map from \(X\) into any locally convex space is automatically **continuous**. Equivalently:</p>
+
+<ul>
+  <li>Every bounded set in \(X\) is contained in the absolutely convex hull of some neighborhood of 0.</li>
+  <li>Bornological spaces allow **boundedness to control continuity**, which is useful for unbounded operators and inductive limit spaces.</li>
+</ul>
+
+<p><strong>Examples / Remarks:</strong></p>
+
+<ul>
+  <li>Every **Banach space** is barrelled and bornological.</li>
+  <li>LF spaces, like \(\mathcal{D}(\Omega)\), are bornological but not necessarily barrelled.</li>
+  <li>Barrelled vs bornological: barrelled controls continuity via **barrels (large sets)**, bornological controls continuity via **bounded sets**.</li>
+</ul>
+
+</details>
+
+
+
+
+
+
+
+
+
+<h2>Question 50: σ-Algebras</h2>
+
+<p><strong>Question:</strong> Let \(X\) be a set. Define what a <strong>σ-algebra</strong> on \(X\) is, and state its key properties.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Answer</strong></summary>
+
+<p>A <strong>σ-algebra</strong> \(\mathcal{F}\) on a set \(X\) is a collection of subsets of \(X\) satisfying the following properties:</p>
+
+<ol>
+  <li><strong>Non-empty:</strong> \(X \in \mathcal{F}\).</li>
+  <li><strong>Closed under complements:</strong> If \(A \in \mathcal{F}\), then \(X \setminus A \in \mathcal{F}\).</li>
+  <li><strong>Closed under countable unions:</strong> If \(A_1, A_2, \dots \in \mathcal{F}\), then \(\bigcup_{n=1}^{\infty} A_n \in \mathcal{F}\).</li>
+</ol>
+
+<p>From these axioms, it follows that σ-algebras are also closed under:</p>
+
+<ul>
+  <li>Countable intersections: \(\bigcap_{n=1}^{\infty} A_n \in \mathcal{F}\)</li>
+  <li>Set differences: \(A \setminus B \in \mathcal{F}\) if \(A, B \in \mathcal{F}\)</li>
+</ul>
+
+<p>These properties make σ-algebras suitable as domains for defining measures.</p>
+
+</details>
+
+
+
+
+  
+
+
+
+  <h2>Question 51: Measure and Its Properties</h2>
+
+<p><strong>Question:</strong> Let \((X, \mathcal{F})\) be a measurable space. Define what a <strong>measure</strong> is on \((X, \mathcal{F})\) and state its main properties.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Answer</strong></summary>
+
+<p>A <strong>measure</strong> \(\mu\) on a measurable space \((X, \mathcal{F})\) is a function</p>
+
+\[
+\mu: \mathcal{F} \to [0, \infty]
+\]
+
+<p>that satisfies the following properties:</p>
+
+<ol>
+  <li><strong>Non-negativity:</strong> For all \(A \in \mathcal{F}\), \(\mu(A) \ge 0\).</li>
+  <li><strong>Null empty set:</strong> \(\mu(\emptyset) = 0\).</li>
+  <li><strong>Countable additivity (σ-additivity):</strong> For any countable collection of pairwise disjoint sets \(\{A_n\} \subset \mathcal{F}\),</li>
+</ol>
+
+\[
+\mu\Big(\bigcup_{n=1}^{\infty} A_n \Big) = \sum_{n=1}^{\infty} \mu(A_n)
+\]
+
+<p>From these axioms, it follows automatically that measures are:</p>
+
+<ul>
+  <li><strong>Monotone:</strong> If \(A \subset B\), then \(\mu(A) \le \mu(B)\).</li>
+  <li><strong>Countably subadditive:</strong> For any countable collection \(\{A_n\} \subset \mathcal{F}\),</li>
+</ul>
+
+\[
+\mu\Big(\bigcup_{n=1}^{\infty} A_n \Big) \le \sum_{n=1}^{\infty} \mu(A_n)
+\]
+
+<p>These properties form the foundation for integration and probability theory.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+<h2>Question 52: Lebesgue Integral – Definition and Steps</h2>
+
+<p><strong>Question:</strong> Let \((X, \mathcal{F}, \mu)\) be a measure space and \(f: X \to \mathbb{R}\) a measurable function. Describe the steps to define the Lebesgue integral of \(f\), including how to handle positive and negative parts.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Answer</strong></summary>
+
+<h3>Steps to Define the Lebesgue Integral</h3>
+
+<ol>
+  <li><strong>Step 1: Non-negative simple functions:</strong>  
+  Start with a measurable function \(\phi: X \to [0, \infty)\) that takes only finitely many values (simple function).  
+  Define the integral:</li>
+
+\[
+\int_X \phi \, d\mu := \sum_{i=1}^{n} a_i \, \mu(A_i)
+\]
+
+where \(\phi = \sum_{i=1}^{n} a_i \chi_{A_i}\) and \(A_i\) are measurable, pairwise disjoint sets.
+
+  <li><strong>Step 2: Extend to non-negative measurable functions:</strong>  
+  For \(f \ge 0\) measurable, define</li>
+
+\[
+\int_X f \, d\mu := \sup \left\{ \int_X \phi \, d\mu : 0 \le \phi \le f, \, \phi \text{ simple} \right\}.
+\]
+
+  <li><strong>Step 3: Split general measurable functions:</strong>  
+  For a real-valued \(f\), write</li>
+
+\[
+f = f^+ - f^- \quad \text{where} \quad f^+ = \max(f,0), \quad f^- = \max(-f,0).
+\]
+
+Define
+
+\[
+\int_X f \, d\mu := \int_X f^+ \, d\mu - \int_X f^- \, d\mu,
+\]
+
+provided at least one of \(\int_X f^+ d\mu\) or \(\int_X f^- d\mu\) is finite.
+
+  <li><strong>Step 4: Absolute integrability:</strong>  
+  \(f\) is called integrable if \(\int_X |f| \, d\mu < \infty\). Then the integral is well-defined and finite.
+</ol>
+
+<p><strong>Summary:</strong> Lebesgue integration starts from simple non-negative functions, extends to all non-negative measurable functions by supremum, then splits a general function into positive and negative parts.</p>
+
+</details>
+
+
+
+
+
+
+
+
+<h2>Question 53: Fundamental Theorems of Lebesgue Integration</h2>
+
+<p><strong>Question:</strong> Let \((X, \mathcal{F}, \mu)\) be a measure space. Prove the following key results of Lebesgue integration:</p>
+
+<ol>
+  <li>Monotone Convergence Theorem (MCT)</li>
+  <li>Fatou’s Lemma</li>
+  <li>Dominated Convergence Theorem (DCT)</li>
+</ol>
+
+<textarea rows="20" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>1. Monotone Convergence Theorem (MCT)</h3>
+
+<p><strong>Theorem:</strong> Let \((f_n)\) be a sequence of non-negative measurable functions on \(X\) such that \(f_n \uparrow f\) pointwise (i.e., \(f_1 \le f_2 \le \dots\) and \(f_n \to f\)). Then</p>
+
+\[
+\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu.
+\]
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Since \(f_n \le f\), the sequence \(\int f_n d\mu\) is **monotone increasing** and bounded above by \(\int f d\mu\) (possibly \(+\infty\)).</li>
+  <li>By the definition of the Lebesgue integral for non-negative functions,</li>
+
+\[
+\int_X f \, d\mu = \sup \left\{ \int_X \phi \, d\mu : 0 \le \phi \le f, \phi \text{ simple} \right\}.
+\]
+
+  <li>Given any simple function \(\phi \le f\), there exists \(N\) such that \(\phi \le f_n\) for all \(n \ge N\). Hence, \(\int \phi \le \int f_n\).</li>
+  <li>Taking supremum over all \(\phi\), we get \(\lim_{n\to\infty} \int f_n = \int f\).</li>
+</ol>
+
+---
+
+<h3>2. Fatou’s Lemma</h3>
+
+<p><strong>Theorem:</strong> Let \((f_n)\) be a sequence of non-negative measurable functions. Then</p>
+
+\[
+\int_X \liminf_{n \to \infty} f_n \, d\mu \le \liminf_{n \to \infty} \int_X f_n \, d\mu.
+\]
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Define \(g_k := \inf_{n \ge k} f_n \). Then \(g_k \uparrow \liminf_{n \to \infty} f_n\).</li>
+  <li>Apply MCT to \(g_k\):</li>
+  
+\[
+\int_X \liminf_{n\to\infty} f_n \, d\mu = \lim_{k \to \infty} \int_X g_k \, d\mu.
+\]
+
+  <li>For each \(k\), \(g_k \le f_n\) for all \(n \ge k\), hence \(\int g_k \le \inf_{n \ge k} \int f_n\).</li>
+  <li>Take \(k \to \infty\), then \(\lim_{k \to \infty} \int g_k \le \liminf_{n \to \infty} \int f_n\), proving Fatou's lemma.</li>
+</ol>
+
+---
+
+<h3>3. Dominated Convergence Theorem (DCT)</h3>
+
+<p><strong>Theorem:</strong> Let \((f_n)\) be a sequence of measurable functions such that \(f_n \to f\) pointwise and there exists an **integrable function** \(g \ge 0\) with \(|f_n| \le g\) for all \(n\). Then \(f\) is integrable and</p>
+
+\[
+\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu.
+\]
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Define \(h_n := g - f_n\) and \(k_n := g + f_n\), which are non-negative and satisfy \(h_n \to g - f\), \(k_n \to g + f\).</li>
+  <li>Apply Fatou's lemma to \(h_n\) and \(k_n\):</li>
+
+\[
+\int_X (g - f) \, d\mu \le \liminf \int_X (g - f_n) \, d\mu, \quad
+\int_X (g + f) \, d\mu \le \liminf \int_X (g + f_n) \, d\mu.
+\]
+
+  <li>Rewriting gives:</li>
+
+\[
+\limsup \int_X f_n \le \int_X f \le \liminf \int_X f_n.
+\]
+
+  <li>Hence \(\lim \int f_n = \int f\), proving DCT.</li>
+</ol>
+
+<p><strong>Conclusion:</strong> These three results provide the foundation for **passing limits under the integral** and handling sequences of measurable functions.</p>
+
+</details>
+
+
+
+
+
+<h2>L<sup>p</sup> Spaces</h2>
+
+<p><strong>Key Points:</strong></p>
+
+<ul>
+  <li>Let \((X, \mathcal{F}, \mu)\) be a measure space and \(1 \le p < \infty\). Then</li>
+
+\[
+L^p(X, \mu) := \left\{ f : X \to \mathbb{R} \text{ (or } \mathbb{C}) \text{ measurable } : \int_X |f|^p \, d\mu < \infty \right\}.
+\]
+
+  <li>Norm on \(L^p\):</li>
+
+\[
+\|f\|_p := \left( \int_X |f|^p \, d\mu \right)^{1/p}.
+\]
+
+  <li>For \(p = \infty\), define the essentially bounded functions:</li>
+
+\[
+L^\infty(X, \mu) := \{ f : X \to \mathbb{R} \text{ measurable } : \text{ess sup}_{x \in X} |f(x)| < \infty \},
+\]
+
+with norm \(\|f\|_\infty := \text{ess sup}_{x \in X} |f(x)|.\)
+
+  <li>Important properties:</li>
+  <ul>
+    <li>\(L^p\) is a **Banach space** under \(\|\cdot\|_p\).</li>
+    <li>For \(1 < p < \infty\), the dual space \((L^p)^* \cong L^q\) where \(1/p + 1/q = 1\).</li>
+    <li>\(L^2\) is a **Hilbert space** with inner product \(\langle f, g \rangle = \int_X f \overline{g} \, d\mu\).</li>
+  </ul>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Question 53: Key Properties of L<sup>p</sup> Spaces: Hölder and Minkowski Inequalities</h2>
+
+<p><strong>Question:</strong> Prove Hölder’s and Minkowski’s inequalities for \(L^p(X, \mu)\), and show that the L<sup>p</sup> norm satisfies the triangle inequality.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>1. Hölder’s Inequality</h3>
+
+<p><strong>Theorem:</strong> Let \(1 < p, q < \infty\) with \(1/p + 1/q = 1\), and \(f \in L^p, g \in L^q\). Then</p>
+
+\[
+\int_X |f g| \, d\mu \le \|f\|_p \, \|g\|_q.
+\]
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Use Young’s inequality: for \(a, b \ge 0\), \(ab \le \frac{a^p}{p} + \frac{b^q}{q}\).</li>
+  <li>Set \(a = |f(x)| / \|f\|_p\), \(b = |g(x)| / \|g\|_q\). Then</li>
+
+\[
+|f(x) g(x)| \le \frac{|f(x)|^p}{p \|f\|_p^p} + \frac{|g(x)|^q}{q \|g\|_q^q}.
+\]
+
+  <li>Integrate both sides over \(X\):</li>
+
+\[
+\int_X \frac{|f g|}{\|f\|_p \|g\|_q} \, d\mu \le \frac{1}{p} + \frac{1}{q} = 1 \quad \implies \quad \int_X |fg| \, d\mu \le \|f\|_p \|g\|_q.
+\]
+</ol>
+
+---
+
+<h3>2. Minkowski’s Inequality (Triangle Inequality)</h3>
+
+<p><strong>Theorem:</strong> For \(f, g \in L^p(X, \mu)\), \(1 \le p < \infty\),</p>
+
+\[
+\|f + g\|_p \le \|f\|_p + \|g\|_p.
+\]
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>For \(p = 1\), obvious from linearity of integral.</li>
+  <li>For \(1 < p < \infty\), write</li>
+
+\[
+\|f + g\|_p^p = \int_X |f + g|^p \, d\mu.
+\]
+
+  <li>Use the convexity inequality: \(|f + g|^p \le |f| |f + g|^{p-1} + |g| |f + g|^{p-1}\).</li>
+  <li>Apply Hölder’s inequality to each term with exponents \(p\) and \(q\):</li>
+
+\[
+\int_X |f| |f + g|^{p-1} \le \|f\|_p \, \||f + g|^{p-1}\|_q = \|f\|_p \, \|f + g\|_p^{p-1},
+\]
+
+and similarly for \(g\).  
+
+  <li>Combine terms: \(\|f + g\|_p^p \le (\|f\|_p + \|g\|_p) \|f + g\|_p^{p-1} \implies \|f + g\|_p \le \|f\|_p + \|g\|_p\).</li>
+</ol>
+
+---
+
+<h3>3. L<sup>p</sup> Norm Properties</h3>
+
+<ul>
+  <li>Non-negativity: \(\|f\|_p \ge 0\) and \(\|f\|_p = 0 \iff f = 0 \ \mu\text{-a.e.}\)</li>
+  <li>Homogeneity: \(\|\alpha f\|_p = |\alpha| \, \|f\|_p\)</li>
+  <li>Triangle inequality: \(\|f + g\|_p \le \|f\|_p + \|g\|_p\) (Minkowski)</li>
+</ul>
+
+<p></p> Therefore, \((L^p(X, \mu), \|\cdot\|_p)\) is a **normed space**.</p>
+
+</details>
+
+
+
+
+
+  <hr style="border: 2px solid #000; margin-top: 40px; margin-bottom: 20px;">
+
+<h2>Duality of L<sup>p</sup> Spaces</h2>
+
+<p><strong>Question:</strong> Let \((X, \mathcal{F}, \mu)\) be a measure space, and let \(1 < p < \infty\) with conjugate exponent \(q\) defined by \(1/p + 1/q = 1\). Describe the dual space of \(L^p(X, \mu)\) and prove it.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>Proposition (Dual of L<sup>p</sup>):</h3>
+
+<p>For \(1 < p < \infty\), the dual space \((L^p(X, \mu))^*\) is isometrically isomorphic to \(L^q(X, \mu)\). Explicitly, for each \(g \in L^q\), the linear functional</p>
+
+\[
+\Lambda_g(f) := \int_X f(x) g(x) \, d\mu
+\]
+
+is continuous on \(L^p\) with operator norm \(\|\Lambda_g\| = \|g\|_q\), and every continuous linear functional on \(L^p\) arises this way.
+
+---
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>Step 1: Linearity and boundedness:</strong>  
+  For \(f \in L^p\), define \(\Lambda_g(f) = \int f g \, d\mu\).  
+  By Hölder’s inequality:</li>
+
+\[
+|\Lambda_g(f)| = \left|\int_X f g \, d\mu\right| \le \|f\|_p \, \|g\|_q,
+\]
+
+so \(\Lambda_g\) is continuous with \(\|\Lambda_g\| \le \|g\|_q\).
+
+  <li><strong>Step 2: Norm equality:</strong>  
+  Take \(f = \frac{|g|^{q-1} \operatorname{sgn}(g)}{\|g\|_q^{q/p}} \in L^p\) (normalised), then  
+
+\[
+|\Lambda_g(f)| = \|g\|_q.
+\]
+
+Thus \(\|\Lambda_g\| = \|g\|_q\).
+
+  <li><strong>Step 3: Surjectivity:</strong>  
+  Let \(\Lambda \in (L^p)^*\). Using the **Radon–Nikodym theorem**, there exists \(g \in L^q\) such that  
+
+\[
+\Lambda(f) = \int_X f g \, d\mu \quad \forall f \in L^p.
+\]
+
+  <li>Hence every continuous linear functional on \(L^p\) is represented by some \(g \in L^q\), completing the duality.</li>
+</ol>
+
+<p><strong>Conclusion:</strong> \((L^p(X, \mu))^* \cong L^q(X, \mu)\) isometrically, which is fundamental in functional analysis for understanding bounded linear functionals, reflexivity of \(L^p\) spaces, and weak convergence.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <h2>Question 54: Radon–Nikodym Theorem</h2>
+
+<p><strong>Question:</strong> Let \(\nu\) and \(\mu\) be σ-finite measures on \((X, \mathcal{F})\) with \(\nu \ll \mu\) (ν absolutely continuous w.r.t μ). Prove that there exists a measurable function \(f: X \to [0, \infty)\) such that</p>
+
+\[
+\nu(E) = \int_E f \, d\mu \quad \forall E \in \mathcal{F}.
+\]
+
+---
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof Sketch</strong></summary>
+
+<h3>Theorem (Radon–Nikodym):</h3>
+
+<p>If \(\nu \ll \mu\) are σ-finite measures, there exists a unique \(f \in L^1(\mu)\) such that</p>
+
+\[
+\nu(E) = \int_E f \, d\mu \quad \forall E \in \mathcal{F}.
+\]
+
+The function \(f\) is called the <strong>Radon–Nikodym derivative</strong> of ν with respect to μ, denoted \(f = \frac{d\nu}{d\mu}\).</p>
+
+---
+
+<h3>Proof Sketch:</h3>
+
+<ol>
+  <li><strong>Step 1: σ-finite reduction:</strong>  
+  Write \(X = \bigcup_{n=1}^\infty X_n\) with \(\mu(X_n), \nu(X_n) < \infty\). It suffices to construct \(f\) on each \(X_n\) and then glue them together.</li>
+
+  <li><strong>Step 2: Define candidate function:</strong>  
+  Consider the set of all non-negative measurable functions \(\phi\) with  
+  \(\int_E \phi \, d\mu \le \nu(E)\) for all measurable \(E\). Let  
+  \[
+  f := \sup \{ \phi : \phi \le \nu \text{ in this sense} \}.
+  \]  
+
+  <li><strong>Step 3: Use monotone convergence:</strong>  
+  Construct an increasing sequence \(\phi_n \uparrow f\). By Monotone Convergence Theorem,  
+  \[
+  \int_E f \, d\mu = \lim_{n \to \infty} \int_E \phi_n \, d\mu \le \nu(E).
+  \]  
+
+  <li><strong>Step 4: Maximality argument:</strong>  
+  If there existed a set \(A\) with \(\int_A f \, d\mu < \nu(A)\), one could increase \(f\) on \(A\) to contradict the definition of \(f\) as a supremum. Hence equality holds:  
+  \[
+  \int_E f \, d\mu = \nu(E) \quad \forall E.
+  \]
+
+  <li><strong>Step 5: Uniqueness:</strong>  
+  If \(g\) also satisfies \(\int_E g \, d\mu = \nu(E)\), then \(\int_E (f-g) \, d\mu = 0\) for all \(E\), implying \(f = g\) μ-a.e.</li>
+</ol>
+
+<p><strong>Conclusion:</strong> The Radon–Nikodym derivative \(f = \frac{d\nu}{d\mu}\) exists, is unique μ-a.e., and allows expressing any absolutely continuous measure w.r.t μ as an integral against μ.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+<h2>Question 55: Weak Convergence in L<sup>p</sup> Spaces</h2>
+
+<p><strong>Question:</strong> Define weak convergence in \(L^p(X, \mu)\) for \(1 < p < \infty\), state its key properties, and give an illustrative example.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Definition:</h3>
+
+<p>A sequence \((f_n) \subset L^p(X, \mu)\) is said to <strong>converge weakly</strong> to \(f \in L^p(X, \mu)\), denoted \(f_n \rightharpoonup f\), if</p>
+
+\[
+\int_X f_n(x) g(x) \, d\mu \longrightarrow \int_X f(x) g(x) \, d\mu \quad \forall g \in L^q(X, \mu),
+\]
+
+where \(q\) is the conjugate exponent of \(p\) (\(1/p + 1/q = 1\)).
+
+---
+
+<h3>Key Properties:</h3>
+
+<ul>
+  <li>Weak convergence implies boundedness in norm: \(\sup_n \|f_n\|_p < \infty\).</li>
+  <li>Weak limits are unique.</li>
+  <li>Norm is lower semicontinuous under weak convergence:  
+  \(\|f\|_p \le \liminf_{n \to \infty} \|f_n\|_p\).</li>
+  <li>Every bounded sequence in \(L^p\), \(1 < p < \infty\), has a weakly convergent subsequence (Banach–Alaoglu theorem + reflexivity).</li>
+</ul>
+
+---
+
+<h3>Example:</h3>
+
+<p>Let \(X = [0,1]\), \(f_n(x) = \sin(2 \pi n x)\) in \(L^2([0,1])\). Then \(\|f_n\|_2 = 1\), but for any \(g \in L^2([0,1])\),</p>
+
+\[
+\int_0^1 f_n(x) g(x) \, dx \to 0 \quad \text{as } n \to \infty.
+\]
+
+<p>Hence \(f_n \rightharpoonup 0\) weakly, but \(\|f_n - 0\|_2 = 1 \not\to 0\).  
+Intuition: weak convergence tests only against linear functionals (duals), not full norms.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+<h2>56: Advanced Spectral Theory: Unbounded Operators</h2>
+
+<p><strong>Question / Key Points:</strong> Let \(T\) be a (possibly unbounded) self-adjoint operator on a Hilbert space \(H\). Introduce the spectral measure and its properties, and describe the spectral theorem for unbounded operators.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>1. Spectral Measure for Self-Adjoint Operators</h3>
+
+<p>Let \(B(\mathbb{R})\) denote the Borel σ-algebra of \(\mathbb{R}\). A <strong>spectral measure</strong> associated with a self-adjoint operator \(T\) is a map</p>
+
+\[
+E : B(\mathbb{R}) \to \mathcal{B}(H) \quad \text{(bounded operators on } H)
+\]
+
+satisfying:
+
+<ol>
+  <li>Projection-valued: \(E(B)\) is an orthogonal projection for each Borel set \(B \subset \mathbb{R}\).</li>
+  <li>Countable additivity: for disjoint \(B_1, B_2, \dots \in B(\mathbb{R})\),  
+  \(\sum_n E(B_n) = E(\bigcup_n B_n)\) (strong operator topology).</li>
+  <li>Normalisation: \(E(\mathbb{R}) = I\), the identity operator.</li>
+  <li>Compatibility with \(T\): for \(x, y \in D(T)\),  
+  \(\langle x, T y \rangle = \int_\mathbb{R} \lambda \, d \langle x, E(\lambda) y \rangle\).</li>
+</ol>
+
+---
+
+<h3>2. Spectral Theorem (Unbounded Case)</h3>
+
+<p>Let \(T\) be self-adjoint on \(H\). Then there exists a unique spectral measure \(E\) such that</p>
+
+\[
+T = \int_\mathbb{R} \lambda \, dE(\lambda),
+\]
+
+in the sense that for all \(x \in D(T)\), the integral  
+\(\int_\mathbb{R} \lambda^2 \, d\|E(\lambda)x\|^2 < \infty\) and
+
+\[
+\langle x, T x \rangle = \int_\mathbb{R} \lambda \, d\|E(\lambda)x\|^2.
+\]
+
+<p>This generalises the diagonalisation of bounded self-adjoint operators to unbounded operators.</p>
+
+---
+
+<h3>3. Properties of the Spectral Measure \(E\)</h3>
+
+<ul>
+  <li>Support of \(E\) equals the spectrum of \(T\): \(\sigma(T) = \{\lambda \in \mathbb{R} : E(U) \neq 0 \ \forall U \ni \lambda \}\).</li>
+  <li>Functional calculus: For any Borel function \(f : \mathbb{R} \to \mathbb{C}\),  
+  \[
+  f(T) := \int_\mathbb{R} f(\lambda) \, dE(\lambda)
+  \]  
+  defines a (possibly unbounded) operator on \(H\).</li>
+  <li>Strongly commuting projections: \(E(B_1) E(B_2) = E(B_1 \cap B_2)\).</li>
+</ul>
+
+---
+
+<h3>4. Intuition:</h3>
+
+<p>Think of \(E(B)\) as “projecting onto the subspace of vectors with spectral values in \(B\).”  
+Unbounded operators (like momentum or position in quantum mechanics) are not bounded, but the spectral theorem allows a **rigorous decomposition** into “generalised eigenvectors” via the spectral measure.</p>
+
+</details>
+
+
+
+
+
+
+
+  
+  <h2>57: Operator-Valued Riemann Sums and Spectral Integrals</h2>
+
+<p><strong>Question:</strong> Let \(T\) be a self-adjoint operator on a Hilbert space \(H\) with spectral measure \(E\). Define the operator-valued Riemann sums for approximating the spectral integral</p>
+
+\[
+T = \int_\mathbb{R} \lambda \, dE(\lambda).
+\]
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Definition</strong></summary>
+
+<h3>1. Partition of the spectrum:</h3>
+
+<p>Let \(\sigma(T) \subset \mathbb{R}\) be the spectrum of \(T\). Choose a partition</p>
+
+\[
+-\infty < \lambda_0 < \lambda_1 < \dots < \lambda_n < \infty
+\]
+
+of the real line (or a bounded interval containing the spectrum). For each subinterval \([\lambda_{k-1}, \lambda_k)\), pick a sample point \(\xi_k \in [\lambda_{k-1}, \lambda_k)\).</p>
+
+---
+
+<h3>2. Operator-valued Riemann sum:</h3>
+
+<p>The Riemann sum approximating the spectral integral is</p>
+
+\[
+S_n := \sum_{k=1}^n \xi_k \, E([\lambda_{k-1}, \lambda_k)).
+\]
+
+<p>Here each term \(\xi_k E([\lambda_{k-1}, \lambda_k))\) is a bounded operator on \(H\), and the sum \(S_n\) is also an operator on \(H\).</p>
+
+---
+
+<h3>3. Limit to spectral integral:</h3>
+
+<p>The spectral integral is defined as the limit (in the strong operator topology or in norm if bounded):</p>
+
+\[
+\int_\mathbb{R} \lambda \, dE(\lambda) := \lim_{\| \Delta \| \to 0} \sum_{k=1}^n \xi_k E([\lambda_{k-1}, \lambda_k)),
+\]
+
+where \(\| \Delta \| = \max_k (\lambda_k - \lambda_{k-1})\) is the mesh of the partition.</p>
+
+<p>This is analogous to the classical Riemann integral, but each “area element” is replaced by a **projection operator multiplied by the sample point**.</p>
+
+---
+
+<h3>4. Intuition:</h3>
+
+<ul>
+  <li>Think of \(E([\lambda_{k-1}, \lambda_k))\) as projecting onto the subspace of \(H\) corresponding to spectral values in that interval.</li>
+  <li>The Riemann sum approximates \(T\) by summing the contributions from each spectral slice.</li>
+  <li>In the limit of finer partitions, the sum converges to the full operator \(T\) in the strong operator topology.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Self-Adjoint Operators and Spectral Measures</h2>
+
+<p><strong>Question:</strong> Let \(A\) be a self-adjoint operator on a Hilbert space \(H\). State and explain the existence and uniqueness of its spectral measure \(E_A\).</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Theorem (Spectral Theorem for Self-Adjoint Operators)</h3>
+
+<p>Let \(A\) be a (possibly unbounded) self-adjoint operator on a Hilbert space \(H\). Then there exists a unique **projection-valued measure**</p>
+
+\[
+E_A : B(\mathbb{R}) \to \mathcal{B}(H)
+\]
+
+such that:
+
+<ol>
+  <li>For each Borel set \(B \subset \mathbb{R}\), \(E_A(B)\) is an orthogonal projection on \(H\).</li>
+  <li>Countable additivity: If \(B_1, B_2, \dots\) are disjoint Borel sets, then  
+  \(\sum_{n} E_A(B_n) = E_A(\bigcup_n B_n)\) in the strong operator topology.</li>
+  <li>Normalisation: \(E_A(\mathbb{R}) = I_H\).</li>
+  <li>Representation of \(A\) as a spectral integral:  
+  \[
+  A = \int_{\mathbb{R}} \lambda \, dE_A(\lambda),
+  \]  
+  meaning that for all \(x \in D(A)\),  
+  \(\langle x, A x \rangle = \int_{\mathbb{R}} \lambda \, d\langle x, E_A(\lambda) x \rangle\).</li>
+  <li><strong>Uniqueness:</strong> No other projection-valued measure satisfies all the above properties for \(A\).</li>
+</ol>
+
+---
+
+<h3>Intuition:</h3>
+
+<ul>
+  <li>\(E_A(B)\) “projects” vectors onto the subspace of \(H\) corresponding to spectral values of \(A\) lying in \(B\).</li>
+  <li>Even for unbounded operators (like momentum in quantum mechanics), this gives a rigorous decomposition “like diagonalisation”.</li>
+  <li>The spectral measure allows defining \(f(A)\) for Borel functions \(f\) via the **functional calculus**:  
+  \[
+  f(A) := \int_{\mathbb{R}} f(\lambda) \, dE_A(\lambda).
+  \]</li>
+</ul>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+<h2>58: Functional Calculus for Self-Adjoint Operators</h2>
+
+<p><strong>Question:</strong> Let \(A\) be a self-adjoint operator on a Hilbert space \(H\) with spectral measure \(E_A\). Define \(f(A)\) for a Borel measurable function \(f : \mathbb{R} \to \mathbb{C}\) and explain the main properties.</p>
+
+<textarea rows="12" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>1. Definition (Borel Functional Calculus)</h3>
+
+<p>Let \(f : \mathbb{R} \to \mathbb{C}\) be a **Borel measurable function**. Then the operator \(f(A)\) is defined by the spectral integral:</p>
+
+\[
+f(A) := \int_{\mathbb{R}} f(\lambda) \, dE_A(\lambda).
+\]
+
+<p>This means that for each \(x \in H\),</p>
+
+\[
+\langle x, f(A) x \rangle = \int_{\mathbb{R}} f(\lambda) \, d\langle x, E_A(\lambda) x \rangle.
+\]
+
+<p>If \(f\) is bounded, \(f(A)\) is a bounded operator. If \(f\) is unbounded, \(f(A)\) is defined on the domain:</p>
+
+\[
+D(f(A)) = \left\{ x \in H : \int_{\mathbb{R}} |f(\lambda)|^2 \, d\langle x, E_A(\lambda) x \rangle < \infty \right\}.
+\]
+
+---
+
+<h3>2. Key Properties</h3>
+
+<ul>
+  <li><strong>Linearity:</strong> \( (a f + b g)(A) = a f(A) + b g(A)\) for scalars \(a, b\).</li>
+  <li><strong>Multiplicative:</strong> \((f g)(A) = f(A) g(A)\) on the intersection of domains.</li>
+  <li><strong>Adjoint:</strong> If \(f\) is complex-valued, \(f(A)^* = \overline{f}(A)\).</li>
+  <li><strong>Norm:</strong> If \(f\) is bounded, \(\|f(A)\| = \sup_{\lambda \in \sigma(A)} |f(\lambda)|\).</li>
+  <li><strong>Compatibility with polynomials:</strong> For \(f(\lambda) = \lambda^n\), \(f(A) = A^n\).</li>
+</ul>
+
+---
+
+<h3>3. Intuition</h3>
+
+<ul>
+  <li>Think of \(f(A)\) as **applying \(f\) to the “eigenvalues”** of \(A\), even if \(A\) has a continuous spectrum.</li>
+  <li>It generalises diagonalisation: for bounded self-adjoint \(A\) with discrete spectrum \(\{\lambda_i\}\) and orthonormal eigenvectors \(e_i\),  
+  \[
+  f(A) = \sum_i f(\lambda_i) \, \langle \cdot, e_i \rangle e_i.
+  \]</li>
+  <li>Allows constructing important operators like \(\exp(i t A)\) for unitary groups or \(|A|^{1/2}\) in quantum mechanics and PDEs.</li>
+</ul>
+
+</details>
+
+
+
+
+
+
+  <hr style="border: 2px solid #000; margin-top: 40px; margin-bottom: 20px;">
+
+<h2>59: Unbounded Operators</h2>
+
+<p><strong>Question:</strong> Let \(A : D(A) \subset H \to H\) be a linear operator on a Hilbert space \(H\). Define what it means for \(A\) to be unbounded and prove that this is equivalent to saying no constant \(M\) exists such that \(\|A x\| \le M \|x\|\) for all \(x \in D(A)\).</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>Definition:</h3>
+
+<p>A linear operator \(A : D(A) \subset H \to H\) is called <strong>bounded</strong> if there exists a constant \(M \ge 0\) such that</p>
+
+\[
+\|A x\| \le M \|x\|, \quad \forall x \in D(A).
+\]
+
+<p>If no such \(M\) exists or \(D(A) \neq H\), the operator is called <strong>unbounded</strong>.</p>
+
+---
+
+<h3>Proposition:</h3>
+
+<p>\(A\) is unbounded \(\iff\) for every \(n \in \mathbb{N}\), there exists \(x_n \in D(A)\) such that \(\|A x_n\| > n \|x_n\|\).</p>
+
+---
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>(⇒) Suppose \(A\) is unbounded:</strong>  
+  By definition, no \(M\) exists such that \(\|A x\| \le M \|x\|\) for all \(x \in D(A)\).  
+  Therefore, for each \(n \in \mathbb{N}\), the inequality \(\|A x\| \le n \|x\|\) must fail for some \(x_n \in D(A)\).  
+  That is, \(\|A x_n\| > n \|x_n\|\).</li>
+
+  <li><strong>(⇐) Conversely, suppose for each \(n\) there exists \(x_n\) with \(\|A x_n\| > n \|x_n\|\):</strong>  
+  If \(A\) were bounded, there would exist \(M \ge 0\) such that \(\|A x\| \le M \|x\|\) for all \(x \in D(A)\).  
+  Choosing \(n > M\) gives a contradiction: \(\|A x_n\| > n \|x_n\| > M \|x_n\|\).  
+  Hence, \(A\) is unbounded.</li>
+</ol>
+
+<p><strong>Conclusion:</strong> The two formulations are equivalent: unboundedness means <em>no uniform bound exists</em> on \(\|A x\| / \|x\|\) over its domain.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+  
+<h2>60: Closed Operators</h2>
+
+<p><strong>Question:</strong> Let \(A : D(A) \subset H \to H\) be a linear operator on a Hilbert space \(H\). Define what it means for \(A\) to be closed and explain its significance.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Definition:</h3>
+
+<p>An operator \(A : D(A) \subset H \to H\) is called <strong>closed</strong> if its <strong>graph</strong> </p>
+
+\[
+G(A) := \{ (x, A x) \in H \times H : x \in D(A) \}
+\]
+
+is a **closed subset** of \(H \times H\) with the product topology (norm on \(H \times H\) given by \(\|(x,y)\| = \sqrt{\|x\|^2 + \|y\|^2}\)).</p>
+
+---
+
+<h3>Equivalent characterisation:</h3>
+
+<p>\(A\) is closed if and only if whenever a sequence \((x_n) \subset D(A)\) satisfies</p>
+
+\[
+x_n \to x \quad \text{and} \quad A x_n \to y \quad \text{in } H,
+\]
+
+then \(x \in D(A)\) and \(A x = y\).</p>
+
+---
+
+<h3>Intuition:</h3>
+
+<ul>
+  <li>Think of a closed operator as one whose “limit points” of the graph remain inside the graph.</li>
+  <li>This ensures stability under limits: if a sequence of inputs converges and their images under \(A\) converge, then the limit is still in the domain and maps correctly.</li>
+  <li>Closedness is crucial for defining **unbounded operators** that behave like bounded ones under limits (e.g., differentiation operator in \(L^2\)).</li>
+</ul>
+
+</details>
+
+  
+  <hr style="border: 2px solid #000; margin-top: 40px; margin-bottom: 20px;">
+
+<h2>Self-Adjoint Operators</h2>
+
+<p><strong>Key Points:</strong></p>
+
+<ul>
+  <li>An operator \(A : D(A) \subset H \to H\) is <strong>self-adjoint</strong> if:</li>
+  <ul>
+    <li>\(A\) is symmetric: \(\langle Ax, y \rangle = \langle x, Ay \rangle\) for all \(x, y \in D(A)\).</li>
+    <li>\(A = A^*\), i.e., its adjoint \(A^*\) has the same domain and coincides with \(A\): \(D(A^*) = D(A)\) and \(A^*x = Ax\) for all \(x \in D(A)\).</li>
+  </ul>
+
+  <li><strong>Consequences:</strong></li>
+  <ul>
+    <li>Every self-adjoint operator is <strong>closed</strong>.</li>
+    <li>A symmetric operator is not necessarily self-adjoint; self-adjointness requires the domain to match the adjoint’s domain.</li>
+    <li>Self-adjointness is essential for spectral theorem, functional calculus, and defining unitary evolution in quantum mechanics.</li>
+  </ul>
+</ul>
+
+
+
+
+
+
+
+<h2>61: Stone’s Theorem (Strongly Continuous Unitary Groups)</h2>
+
+<p><strong>Key Points:</strong></p>
+
+<ul>
+  <li>A family \(\{U(t)\}_{t \in \mathbb{R}}\) of operators on a Hilbert space \(H\) is a <strong>strongly continuous unitary group (SCUG)</strong> if:</li>
+  <ul>
+    <li>\(U(0) = I\) (identity operator)</li>
+    <li>\(U(t+s) = U(t) U(s)\) for all \(s,t \in \mathbb{R}\) (group property)</li>
+    <li>\(t \mapsto U(t)x\) is continuous in the norm of \(H\) for all \(x \in H\) (strong continuity)</li>
+    <li>\(U(t)^* = U(-t)\) (unitarity)</li>
+  </ul>
+
+  <li><strong>Stone’s Theorem:</strong></li>
+  <ul>
+    <li>There exists a unique densely defined **self-adjoint operator \(A\)** on \(H\) such that:</li>
+    \[
+    U(t) = e^{i t A}, \quad t \in \mathbb{R}.
+    \]
+    <li>Conversely, every self-adjoint operator \(A\) generates a SCUG via \(U(t) = e^{i t A}\).</li>
+  </ul>
+
+  <li><strong>Consequences / Intuition:</strong></li>
+  <ul>
+    <li>Provides a one-to-one correspondence between **self-adjoint operators** and **strongly continuous unitary evolution**.</li>
+    <li>Guarantees **unitary quantum evolution** in Hilbert space: time evolution is norm-preserving.</li>
+    <li>Operator \(A\) is interpreted as the **Hamiltonian** in quantum mechanics.</li>
+  </ul>
+</ul>
+
+
+
+
+
+
+
+<h2>62: Normed and Banach Algebras</h2>
+
+<p><strong>Definition:</strong></p>
+
+<ul>
+  <li>A <strong>normed algebra</strong> \(A\) over \(\mathbb{C}\) is a vector space equipped with:</li>
+  <ul>
+    <li>A bilinear product \(A \times A \to A, \ (x,y) \mapsto xy\)</li>
+    <li>A norm \(\|\cdot\|\) such that \(\|xy\| \le \|x\| \, \|y\|\) for all \(x,y \in A\)</li>
+  </ul>
+
+  <li>If \(A\) is complete with respect to the norm, it is called a <strong>Banach algebra</strong>.</li>
+
+  <li>\(A\) is <strong>unital</strong> if there exists an element \(1 \in A\) (identity) such that:</li>
+  <ul>
+    <li>\(1 \cdot x = x \cdot 1 = x\) for all \(x \in A\)</li>
+    <li>\(\|1\| = 1\)</li>
+  </ul>
+</ul>
+
+---
+
+<p><strong>Example:</strong></p>
+
+<ul>
+  <li>\(C([0,1])\), the space of continuous complex-valued functions on \([0,1]\), with:</li>
+  <ul>
+    <li>Pointwise multiplication: \((f \cdot g)(x) = f(x) g(x)\)</li>
+    <li>Supremum norm: \(\|f\|_\infty = \sup_{x \in [0,1]} |f(x)|\)</li>
+    <li>This is a unital Banach algebra (identity is \(1(x) \equiv 1\)).</li>
+  </ul>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<h2>63: Spectral Radius</h2>
+
+<p><strong>Question:</strong> Let \(A\) be a Banach algebra element. What is its spectral radius and how can it be expressed?</p>
+
+<textarea rows="4" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Definition:</h3>
+
+<p>The <strong>spectral radius</strong> of an element \(a \in A\) is</p>
+
+\[
+r(a) := \sup \{ |\lambda| : \lambda \in \sigma(a) \},
+\]
+
+where \(\sigma(a)\) is the <strong>spectrum</strong> of \(a\), i.e., all \(\lambda \in \mathbb{C}\) such that \(a - \lambda 1\) is not invertible in \(A\).</p>
+
+---
+
+<h3>Key Expression (Spectral Radius Formula):</h3>
+
+\[
+r(a) = \lim_{n \to \infty} \|a^n\|^{1/n}.
+\]
+
+<p>This gives a way to compute or estimate the spectral radius using powers of \(a\) in the Banach algebra.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+<h2>64: Maximal Ideals in Banach Algebras</h2>
+
+<p><strong>Question:</strong> What is a maximal ideal in a Banach algebra and what is the key theorem relating maximal ideals to homomorphisms?</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Definition:</h3>
+
+<p>Let \(A\) be a unital Banach algebra over \(\mathbb{C}\). An ideal \(M \subset A\) is called <strong>maximal</strong> if:</p>
+
+<ul>
+  <li>\(M \neq A\)</li>
+  <li>There is no proper ideal \(I\) such that \(M \subsetneq I \subsetneq A\)</li>
+</ul>
+
+---
+
+<h3>Key Theorem (Gelfand-Mazur / Maximal Ideal Correspondence):</h3>
+
+<p>In a unital commutative Banach algebra \(A\):</p>
+
+<ul>
+  <li>Every maximal ideal \(M \subset A\) is the kernel of a non-zero **algebra homomorphism** \(\phi : A \to \mathbb{C}\).</li>
+  <li>Conversely, the kernel of any non-zero homomorphism \(\phi : A \to \mathbb{C}\) is a maximal ideal.</li>
+</ul>
+
+---
+
+<h3>Implications:</h3>
+
+<ul>
+  <li>This establishes a **one-to-one correspondence** between maximal ideals and non-zero complex-valued characters (homomorphisms) on \(A\).</li>
+  <li>It is fundamental for **Gelfand theory**, which studies Banach algebras via their maximal ideals and spectra.</li>
+</ul>
+
+</details>
+
+
+
+
+
+
+
+<h2>65: Gelfand Theory: Commutative Banach Algebras</h2>
+
+<p><strong>Question:</strong> Let \(A\) be a unital commutative Banach algebra. Define the Gelfand transform, describe its properties, and explain the role of algebra homomorphisms.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>1. Characters / Homomorphisms:</h3>
+
+<ul>
+  <li>A <strong>character</strong> on \(A\) is a non-zero algebra homomorphism \(\phi : A \to \mathbb{C}\).</li>
+  <li>The set of all characters is called the <strong>maximal ideal space</strong> or <strong>Gelfand space</strong> \(\mathcal{M}(A)\).</li>
+  <li>Each character \(\phi\) corresponds to a maximal ideal \(M = \ker \phi\).</li>
+</ul>
+
+---
+
+<h3>2. Gelfand Transform:</h3>
+
+<p>The <strong>Gelfand transform</strong> maps an element \(a \in A\) to a function \(\hat{a} : \mathcal{M}(A) \to \mathbb{C}\) defined by:</p>
+
+\[
+\hat{a}(\phi) := \phi(a), \quad \forall \phi \in \mathcal{M}(A).
+\]
+
+<ul>
+  <li>\(\hat{a}\) is continuous with respect to the weak-* topology on \(\mathcal{M}(A)\).</li>
+  <li>The map \(a \mapsto \hat{a}\) is an algebra homomorphism:  
+  \(\widehat{ab} = \hat{a} \hat{b}\), \(\widehat{a+b} = \hat{a} + \hat{b}\), \(\widehat{\lambda a} = \lambda \hat{a}\).</li>
+</ul>
+
+---
+
+<h3>3. Properties / Significance:</h3>
+
+<ul>
+  <li>The **spectrum** of \(a \in A\) satisfies:  
+  \(\sigma(a) = \{\phi(a) : \phi \in \mathcal{M}(A)\} = \hat{a}(\mathcal{M}(A))\).</li>
+  <li>The Gelfand transform is **norm-decreasing**: \(\|\hat{a}\|_\infty \le \|a\|\).</li>
+  <li>For **commutative C*-algebras**, the Gelfand transform is an isometric *-isomorphism onto \(C(\mathcal{M}(A))\).</li>
+  <li>Intuition: Gelfand theory allows one to study abstract Banach algebras via **continuous functions on the space of characters**.</li>
+</ul>
+
+</details>
+
+
+
+
+
+
+
+
+<h2>Gelfand Theory: Commutative Banach Algebras</h2>
+
+<p><strong>Question:</strong> Let \(A\) be a unital commutative Banach algebra. Define the Gelfand transform, describe its properties, and explain the role of algebra homomorphisms.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>1. Characters / Homomorphisms:</h3>
+
+<ul>
+  <li>A <strong>character</strong> on \(A\) is a non-zero algebra homomorphism \(\phi : A \to \mathbb{C}\).</li>
+  <li>The set of all characters is called the <strong>maximal ideal space</strong> or <strong>Gelfand space</strong> \(\mathcal{M}(A)\).</li>
+  <li>Each character \(\phi\) corresponds to a maximal ideal \(M = \ker \phi\).</li>
+</ul>
+
+---
+
+<h3>2. Gelfand Transform:</h3>
+
+<p>The <strong>Gelfand transform</strong> maps an element \(a \in A\) to a function \(\hat{a} : \mathcal{M}(A) \to \mathbb{C}\) defined by:</p>
+
+\[
+\hat{a}(\phi) := \phi(a), \quad \forall \phi \in \mathcal{M}(A).
+\]
+
+<ul>
+  <li>\(\hat{a}\) is continuous with respect to the weak-* topology on \(\mathcal{M}(A)\).</li>
+  <li>The map \(a \mapsto \hat{a}\) is an algebra homomorphism:  
+  \(\widehat{ab} = \hat{a} \hat{b}\), \(\widehat{a+b} = \hat{a} + \hat{b}\), \(\widehat{\lambda a} = \lambda \hat{a}\).</li>
+</ul>
+
+---
+
+<h3>3. Properties / Significance:</h3>
+
+<ul>
+  <li>The **spectrum** of \(a \in A\) satisfies:  
+  \(\sigma(a) = \{\phi(a) : \phi \in \mathcal{M}(A)\} = \hat{a}(\mathcal{M}(A))\).</li>
+  <li>The Gelfand transform is **norm-decreasing**: \(\|\hat{a}\|_\infty \le \|a\|\).</li>
+  <li>For **commutative C*-algebras**, the Gelfand transform is an isometric *-isomorphism onto \(C(\mathcal{M}(A))\).</li>
+  <li>Intuition: Gelfand theory allows one to study abstract Banach algebras via **continuous functions on the space of characters**.</li>
+</ul>
+
+</details>
+
+
+
+
+
+
+<h2>Gelfand-Mazur Theorem</h2>
+
+<p><strong>Question:</strong> State and prove the Gelfand-Mazur theorem for unital Banach algebras.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Proof</strong></summary>
+
+<h3>Theorem (Gelfand-Mazur):</h3>
+
+<p>If \(A\) is a unital Banach algebra over \(\mathbb{C}\) in which every non-zero element is invertible, then \(A \cong \mathbb{C}\); that is, \(A\) is **isometrically isomorphic to the complex numbers**.</p>
+
+---
+
+<h3>Proof:</h3>
+
+<ol>
+  <li>Let \(a \in A\) be arbitrary. Since \(a \neq 0 \implies a\) is invertible, the spectrum \(\sigma(a)\) cannot contain \(0\).</li>
+
+  <li>In a unital Banach algebra, the spectrum \(\sigma(a)\) is **non-empty** for any \(a \in A\) (standard spectral theorem for Banach algebras).</li>
+
+  <li>Thus, \(\sigma(a)\) must consist of a **single non-zero complex number** \(\lambda \in \mathbb{C}\).</li>
+
+  <li>Consider \(b := a - \lambda 1\). Then \(\sigma(b) = \sigma(a - \lambda 1) = \sigma(a) - \lambda = \{0\}\), so \(b\) is **not invertible**.</li>
+
+  <li>But by assumption, **every non-zero element is invertible**, so \(b = 0 \implies a = \lambda 1\).</li>
+
+  <li>Since \(a\) was arbitrary, every element in \(A\) is a scalar multiple of the identity. Therefore, \(A \cong \mathbb{C}\).</li>
+</ol>
+
+<p><strong>Conclusion:</strong> A unital Banach algebra in which all non-zero elements are invertible is necessarily **one-dimensional** and isomorphic to \(\mathbb{C}\).</p>
+
+</details>
+
+
+
+
+
+
+
+
+<h2>Gelfand Representation Theorem</h2>
+
+<p><strong>Question:</strong> State the Gelfand representation theorem for a commutative unital Banach algebra and explain its significance.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Theorem (Gelfand Representation):</h3>
+
+<p>Let \(A\) be a unital **commutative Banach algebra** over \(\mathbb{C}\). Denote by \(\mathcal{M}(A)\) the set of all non-zero algebra homomorphisms (characters) \(\phi: A \to \mathbb{C}\), equipped with the weak-* topology. Then the <strong>Gelfand transform</strong>:</p>
+
+\[
+\Gamma: A \to C(\mathcal{M}(A)), \quad a \mapsto \hat{a}, \quad \hat{a}(\phi) := \phi(a)
+\]
+
+satisfies:
+
+<ol>
+  <li>\(\Gamma\) is a **continuous algebra homomorphism**.</li>
+  <li>\(\sigma(a) = \hat{a}(\mathcal{M}(A))\), so the spectrum of \(a\) is captured by the image of \(\hat{a}\).</li>
+  <li>\(\|\hat{a}\|_\infty \le \|a\|\), and if \(A\) is a **commutative C*-algebra**, \(\Gamma\) is an **isometric *-isomorphism** onto \(C(\mathcal{M}(A))\).</li>
+</ol>
+
+---
+
+<h3>Significance:</h3>
+
+<ul>
+  <li>The Gelfand representation allows one to study abstract commutative Banach algebras via **continuous functions on the space of characters**, turning algebraic problems into function-theoretic problems.</li>
+  <li>It provides a **concrete realisation** of elements in \(A\) as functions, linking the algebraic spectrum with the analytic image under \(\Gamma\).</li>
+  <li>This forms the foundation for **spectral theory** in commutative Banach algebras and for applications in **functional analysis and operator theory**.</li>
+</ul>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+  
+<h2>64: C*-Algebras and Key Consequences</h2>
+
+<p><strong>Question:</strong> What is a C*-algebra? State its defining properties and list the main consequences.</p>
+
+<textarea rows="10" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Definition:</h3>
+
+<p>A <strong>C*-algebra</strong> \(A\) is a Banach algebra over \(\mathbb{C}\) equipped with an involution \( * : A \to A\) (conjugate-linear, \((ab)^* = b^* a^*, (a^*)^* = a\)) such that:</p>
+
+<ol>
+  <li>\(\|a^* a\| = \|a\|^2\) for all \(a \in A\) (C*-identity).</li>
+  <li>It is a Banach algebra: complete normed algebra with sub-multiplicative norm.</li>
+</ol>
+
+---
+
+<h3>Key Consequences:</h3>
+
+<ul>
+  <li><strong>Gelfand-Naimark Theorem:</strong> Every commutative unital C*-algebra \(A\) is *-isomorphic to \(C(X)\), the algebra of continuous complex-valued functions on a compact Hausdorff space \(X\) (its spectrum / character space).</li>
+
+  <li><strong>Self-adjoint elements:</strong> Elements \(a = a^*\) have **real spectrum**, i.e., \(\sigma(a) \subset \mathbb{R}\).</li>
+
+  <li><strong>Norm via spectrum:</strong> For any \(a \in A\), \(\|a\| = r(a)\) if \(a\) is normal (\(aa^* = a^* a\)), so the spectral radius equals the operator norm.</li>
+
+  <li><strong>Functional calculus:</strong> For normal elements \(a \in A\), any continuous function \(f\) on \(\sigma(a)\) defines an element \(f(a) \in A\), extending polynomials to continuous functions.</li>
+
+  <li><strong>Representation on Hilbert space:</strong> Every C*-algebra can be represented as a norm-closed *-subalgebra of \(B(H)\), the bounded operators on some Hilbert space \(H\) (Gelfand-Naimark-Segal construction).</li>
+</ul>
+
+---
+
+<h3>Intuition:</h3>
+
+<p>C*-algebras generalise the algebra of bounded operators on Hilbert space while keeping **norm, involution, and spectral properties tightly linked**. They are central to quantum mechanics, operator theory, and non-commutative geometry.</p>
+
+</details>
+
+
+
+
+
+
+<h2>65: Representations of Algebras</h2>
+
+<p><strong>Question:</strong> What is a representation of a (Banach or C*)-algebra?</p>
+
+<textarea rows="4" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Definition:</h3>
+
+<p>A <strong>representation</strong> of an algebra \(A\) on a Hilbert space \(H\) is a **homomorphism**:</p>
+
+\[
+\pi : A \to B(H)
+\]
+
+such that for all \(a, b \in A\) and \(\lambda \in \mathbb{C}\):  
+
+<ol>
+  <li>\(\pi(a + b) = \pi(a) + \pi(b)\),  \(\pi(\lambda a) = \lambda \pi(a)\)</li>
+  <li>\(\pi(ab) = \pi(a) \pi(b)\)</li>
+  <li>For a *-algebra, \(\pi(a^*) = \pi(a)^*\) (preserves involution)</li>
+</ol>
+
+<p>Intuition: A representation realises abstract algebra elements as **concrete bounded operators on a Hilbert space**.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+<h2>66: GNS Construction (Gelfand–Naimark–Segal)</h2>
+
+<p><strong>Question:</strong> Explain the GNS construction for a C*-algebra \(A\) and a positive linear functional \(\phi\).</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Setup:</h3>
+
+<p>Let \(A\) be a C*-algebra and \(\phi: A \to \mathbb{C}\) a **positive linear functional** (\(\phi(a^* a) \ge 0\) for all \(a\in A\)).</p>
+
+---
+
+<h3>Construction:</h3>
+
+<ol>
+  <li>Define a semi-inner product on \(A\) by \(\langle a, b \rangle := \phi(b^* a)\).</li>
+
+  <li>Define the **null space** \(N := \{ a \in A : \phi(a^* a) = 0 \}\).</li>
+
+  <li>Form the quotient space \(A / N\) and let \([a]\) denote the equivalence class of \(a\). Then \(\langle [a], [b] \rangle := \phi(b^* a)\) is a genuine inner product.</li>
+
+  <li>Complete \(A / N\) with respect to this inner product to get a **Hilbert space** \(H_\phi\).</li>
+
+  <li>Define the representation \(\pi_\phi: A \to B(H_\phi)\) by \(\pi_\phi(a) [b] := [ab]\). This is a ***-representation**.</li>
+
+  <li>The vector \(\xi_\phi := [1_A]\) (if \(A\) is unital) is **cyclic**, meaning \(\pi_\phi(A) \xi_\phi\) is dense in \(H_\phi\), and \(\phi(a) = \langle \pi_\phi(a) \xi_\phi, \xi_\phi \rangle\).</li>
+</ol>
+
+---
+
+<h3>Key Consequences:</h3>
+
+<ul>
+  <li>Every C*-algebra has a faithful representation as operators on some Hilbert space (via direct sums of GNS representations).</li>
+  <li>Provides a **bridge between abstract C*-algebras and concrete Hilbert space operators**.</li>
+  <li>Fundamental in quantum mechanics: positive functionals → states → operator representation.</li>
+</ul>
+
+</details>
+
+
+
+
+  
+
+
+
+<h2>67: Gelfand–Naimark Theorem</h2>
+
+<p><strong>Question:</strong> State and prove the Gelfand–Naimark theorem for C*-algebras.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Theorem (Gelfand–Naimark):</h3>
+
+<p>Every C*-algebra \(A\) is *-isomorphic to a norm-closed *-subalgebra of \(B(H)\), the bounded operators on some Hilbert space \(H\).  
+In other words, every abstract C*-algebra can be represented concretely as operators on a Hilbert space.</p>
+
+---
+
+<h3>Proof Outline:</h3>
+
+<ol>
+  <li>Let \(A\) be a C*-algebra. Consider the set of all **positive linear functionals** \(\phi: A \to \mathbb{C}\) (states).</li>
+
+  <li>For each \(\phi\), construct the **GNS representation** \((\pi_\phi, H_\phi, \xi_\phi)\) as described in the previous section.</li>
+
+  <li>Take the **direct sum** of all GNS representations:  
+  \[
+  \pi := \bigoplus_\phi \pi_\phi : A \to B\Big(\bigoplus_\phi H_\phi\Big)
+  \]  
+  This is a *-representation of \(A\) on a (possibly large) Hilbert space.</li>
+
+  <li>\(\pi\) is **injective (faithful)**: if \(a \neq 0\), there exists a positive linear functional \(\phi\) such that \(\phi(a^* a) > 0\), hence \(\pi_\phi(a) \neq 0\).  
+  Therefore, \(\pi(a) \neq 0\).</li>
+
+  <li>The image \(\pi(A)\) is a **norm-closed *-subalgebra** of \(B(\bigoplus_\phi H_\phi)\), and \(\pi\) preserves the *-algebra structure and the norm (\(\|\pi(a)\| = \|a\|\)).</li>
+</ol>
+
+<h3>Conclusion:</h3>
+
+<p>Thus, any abstract C*-algebra can be faithfully realised as a concrete algebra of bounded operators on a Hilbert space.  
+This establishes the **Gelfand–Naimark representation theorem**.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<h2>68: Non-linear Functional Analysis</h2>
+
+<hr>
+
+<h2>Fixed Point Theorems</h2>
+
+<h3>Banach Fixed Point Theorem (Contraction Mapping)</h3>
+  
+<p><strong>Question:</strong> State the Banach fixed point theorem and prove it.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Theorem (Banach Fixed Point / Contraction Mapping):</h3>
+
+<p>Let \((X, d)\) be a **complete metric space** and \(T: X \to X\) a **contraction**, i.e., there exists \(0 \le k < 1\) such that:</p>
+
+\[
+d(T(x), T(y)) \le k \, d(x, y) \quad \forall x, y \in X.
+\]
+
+Then:</p>
+
+<ol>
+  <li>There exists a **unique fixed point** \(x^* \in X\) such that \(T(x^*) = x^*\).</li>
+  <li>For any \(x_0 \in X\), the sequence \(x_{n+1} = T(x_n)\) converges to \(x^*\) with estimate:  
+  \[
+  d(x_n, x^*) \le \frac{k^n}{1-k} d(x_1, x_0).
+  \]</li>
+</ol>
+
+---
+
+<h3>Proof:</h3>
+
+<ol>
+  <li><strong>Construct the iterative sequence:</strong> Choose \(x_0 \in X\), define \(x_{n+1} = T(x_n)\).</li>
+
+  <li><strong>Show Cauchy property:</strong>  
+  For \(n > m\):
+  \[
+  d(x_n, x_m) \le d(x_n, x_{n-1}) + \dots + d(x_{m+1}, x_m) 
+  \le d(x_1, x_0) \sum_{j=m}^{n-1} k^j
+  \le \frac{k^m}{1-k} d(x_1, x_0).
+  \]  
+  As \(m \to \infty\), \(d(x_n, x_m) \to 0\). Hence \((x_n)\) is **Cauchy**.</li>
+
+  <li><strong>Completeness:</strong> Since \(X\) is complete, \(x_n \to x^* \in X\).</li>
+
+  <li><strong>Fixed point property:</strong>  
+  By continuity of \(T\) (follows from contraction):
+  \[
+  T(x^*) = T\Big(\lim_{n \to \infty} x_n\Big) = \lim_{n \to \infty} T(x_n) = \lim_{n \to \infty} x_{n+1} = x^*.
+  \]</li>
+
+  <li><strong>Uniqueness:</strong> Suppose \(y^*\) is another fixed point:
+  \[
+  d(x^*, y^*) = d(T(x^*), T(y^*)) \le k \, d(x^*, y^*).
+  \]  
+  Since \(0 \le k < 1\), this implies \(d(x^*, y^*) = 0 \Rightarrow x^* = y^*\).</li>
+</ol>
+
+<h3>Conclusion:</h3>
+
+<p>Every contraction on a complete metric space has a **unique fixed point**, and iterating the map converges to it. This theorem is fundamental in proving **existence and uniqueness** in ODEs, integral equations, and functional analysis.</p>
+
+</details>
+
+
+
+
+
+
+<h3>Schauder Fixed Point Theorem</h3>
+
+<p><strong>Question:</strong> State and prove the Schauder fixed point theorem.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h3>Theorem (Schauder Fixed Point):</h3>
+
+<p>Let \(C\) be a **non-empty, convex, compact subset** of a Banach space \(X\).  
+Let \(T: C \to C\) be **continuous**. Then \(T\) has at least **one fixed point** in \(C\), i.e., there exists \(x^* \in C\) such that:</p>
+
+\[
+T(x^*) = x^*.
+\]
+
+---
+
+<h3>Proof Outline:</h3>
+
+<ol>
+  <li><strong>Finite-dimensional approximation:</strong> By compactness, for any \(n\) there exists a finite-dimensional subspace \(X_n \subset X\) and a continuous map \(P_n: C \to X_n \cap C\) that approximates the identity (projection onto finite-dimensional slices).</li>
+
+  <li><strong>Apply Brouwer in finite dimension:</strong>  
+  \(T_n := P_n \circ T: X_n \cap C \to X_n \cap C\) is continuous on a convex, compact subset of \(\mathbb{R}^n\).  
+  By **Brouwer’s fixed point theorem**, \(T_n\) has a fixed point \(x_n \in X_n \cap C\).</li>
+
+  <li><strong>Extract convergent subsequence:</strong>  
+  Since \(C\) is compact, the sequence \((x_n)\) has a convergent subsequence \(x_{n_k} \to x^* \in C\).</li>
+
+  <li><strong>Pass to the limit:</strong>  
+  Continuity of \(T\) gives:
+  \[
+  T(x^*) = \lim_{k \to \infty} T(x_{n_k}) = \lim_{k \to \infty} x_{n_k} = x^*.
+  \]</li>
+</ol>
+
+<h3>Conclusion:</h3>
+
+<p>Schauder’s theorem generalises **Brouwer’s fixed point theorem** to infinite-dimensional Banach spaces under compactness and convexity. It is widely used for proving existence of solutions in **integral equations, PDEs, and nonlinear functional analysis**.</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<h2>69: Variational Methods</h2>
+
+<hr>
+
+<h3>1. Weak Formulation</h3>
+
+  
+<p><strong>Question:</strong> Explain what the weak formulation of a boundary value problem is.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<p><strong>Weak Formulation:</strong></p>
+
+<ul>
+  <li>Start with a differential equation (e.g., boundary value problem) of the form  
+  \(-\Delta u = f\) in \(\Omega\), \(u = 0\) on \(\partial \Omega\).</li>
+  <li>Multiply by a **test function** \(v\) from a suitable space (e.g., \(H_0^1(\Omega)\)) and integrate over the domain \(\Omega\):  
+  \[
+  \int_\Omega -\Delta u \, v \, dx = \int_\Omega f v \, dx.
+  \]</li>
+  <li>Apply **integration by parts** to move derivatives off \(u\) (reduces smoothness requirements):  
+  \[
+  \int_\Omega \nabla u \cdot \nabla v \, dx = \int_\Omega f v \, dx.
+  \]</li>
+  <li>Find \(u \in H_0^1(\Omega)\) satisfying this for all test functions \(v \in H_0^1(\Omega)\).  
+  This is the **weak formulation**.</li>
+</ul>
+
+<p>Key point: Weak formulation allows solutions with less regularity, which is essential in functional analysis and PDE theory.</p>
+
+</details>
+
+<hr>
+
+<h3>2. Direct Method of Calculus of Variations</h3>
+
+<p><strong>Question:</strong> State the direct method in the calculus of variations and its main theorem.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+ <h4>Direct Method (Calculus of Variations):</h4>
+
+<p>Let \(X\) be a reflexive Banach space, and let \(J: X \to \mathbb{R} \cup \{+\infty\}\) be a functional. Suppose:</p>
+
+<ol>
+  <li>\(J\) is **coercive**: \(\|u\|_X \to \infty \implies J(u) \to +\infty\).</li>
+  <li>\(J\) is **weakly lower semi-continuous**: \(u_n \rightharpoonup u \implies J(u) \le \liminf J(u_n)\).</li>
+</ol>
+
+<p>Then **\(J\) attains its minimum**: there exists \(u^* \in X\) such that  
+\[
+J(u^*) = \inf_{u \in X} J(u).
+\]</p>
+
+  <h4>Proof Outline:</h4>
+
+<ol>
+  <li>Take a minimising sequence \((u_n)\) such that \(J(u_n) \to \inf J\).</li>
+  <li>Coercivity ensures \((u_n)\) is **bounded** in \(X\).</li>
+  <li>Reflexivity of \(X\) implies there exists a **weakly convergent subsequence** \(u_{n_k} \rightharpoonup u^*\).</li>
+  <li>Weak lower semi-continuity gives:  
+  \[
+  J(u^*) \le \liminf_{k \to \infty} J(u_{n_k}) = \inf J,
+  \]  
+  hence \(u^*\) is a minimiser.</li>
+</ol>
+
+<h4>Key Point:</h4>
+
+<p>The direct method provides an **existence result** for minimisers in variational problems using functional-analytic properties, without requiring explicit solutions.</p>
+
+</details>
+
+
+
+
+
+
+  
+<h3>3. Euler–Lagrange Equations</h3>
+
+<p><strong>Question:</strong> Derive the Euler–Lagrange equation for a functional \(J(u) = \int_\Omega F(x, u, \nabla u)\, dx\).</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<p><strong>Euler–Lagrange Equations:</strong></p>
+
+<ol>
+  <li>Consider a functional \(J: X \to \mathbb{R}\), \(X\) a suitable function space (e.g., \(H^1(\Omega)\)),  
+  \[
+  J(u) = \int_\Omega F(x, u(x), \nabla u(x)) \, dx.
+  \]</li>
+
+  <li>Take a variation \(v \in X\), define \(u_\epsilon = u + \epsilon v\). Compute  
+  \[
+  \frac{d}{d\epsilon} J(u_\epsilon) \Big|_{\epsilon=0} = 0 \quad \text{(necessary condition for extremum).}
+  \]</li>
+
+  <li>Using integration by parts and assuming smooth boundary conditions, the **Euler–Lagrange equation** is obtained:  
+  \[
+  \frac{\partial F}{\partial u} - \sum_{i=1}^n \frac{d}{dx_i} \frac{\partial F}{\partial (\partial u / \partial x_i)} = 0 \quad \text{in } \Omega.
+  \]</li>
+</ol>
+
+<p>Key point: E-L equations give the **strong form** corresponding to a variational problem.</p>
+
+</details>
+
+<hr>
+
+
+
+
+<h3>4. Weak Compactness Method</h3>
+
+<p><strong>Question:</strong> Explain the weak compactness method in variational problems and how it is used to obtain solutions.</p>
+
+<textarea rows="6" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<p><strong>Weak Compactness Method:</strong></p>
+
+<ul>
+  <li>Used in **infinite-dimensional variational problems** where direct minimisation may fail in norm topology.</li>
+  <li>Key idea: If \(X\) is a **reflexive Banach space**, every bounded sequence has a **weakly convergent subsequence**.</li>
+  <li>Combine **weak convergence + weak lower semi-continuity** of the functional to extract a **minimiser** in the weak sense.</li>
+</ul>
+
+<p>It is widely used in **nonlinear PDEs** where compactness in norm is unavailable.</p>
+
+</details>
+
+<hr>
+
+<h3>5. Rellich–Kondrachov Compactness and Concentration-Compactness Principle</h3>
+
+<p><strong>Question:</strong> State the Rellich–Kondrachov theorem and explain the concentration-compactness principle.</p>
+
+<textarea rows="8" cols="80" placeholder="Write your answer here"></textarea>
+
+<hr>
+
+<details>
+  <summary><strong>Solution / Notes</strong></summary>
+
+<h4>Rellich–Kondrachov Compactness Theorem:</h4>
+
+<p>Let \(\Omega \subset \mathbb{R}^n\) be bounded with Lipschitz boundary. For \(1 \le p < \infty\) and \(1 \le q < p^*\) (Sobolev conjugate):</p>
+
+\[
+H_0^1(\Omega) \hookrightarrow L^q(\Omega) \quad \text{is **compact**.}
+\]
+
+<p>Consequences:</p>
+<ul>
+  <li>Every bounded sequence in \(H_0^1(\Omega)\) has a **strongly convergent subsequence in \(L^q(\Omega)\)**.</li>
+  <li>Used to pass to the limit in **nonlinear functionals** in variational methods.</li>
+</ul>
+
+<h4>Concentration-Compactness Principle (P.-L. Lions):</h4>
+
+<p>Addresses **lack of compactness** due to translation or dilation in unbounded domains:</p>
+
+<ul>
+  <li>Given a bounded sequence in a function space, one of three phenomena occurs:</li>
+  <ol>
+    <li><strong>Compactness:</strong> subsequence strongly converges.</li>
+    <li><strong>Vanishing:</strong> mass spreads out, no limit.</li>
+    <li><strong>Concentration:</strong> mass concentrates at points, possibly forming Dirac-type measures.</li>
+  </ol>
+  <li>Allows **recovery of convergence** by understanding the limiting behavior of sequences that would otherwise "escape" compactness.</li>
+</ul>
+
+<p>Applications: **Nonlinear PDEs, critical Sobolev exponents, blow-up analysis**.</p>
+
+</details>
+
+
+  
 </body>
 </html>
+  
